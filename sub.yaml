@@ -3,604 +3,110 @@ allow-lan: false
 mode: rule
 log-level: info
 proxies:
-- name: 🇳🇦 Namibia - NA 🌍 VL-WS-TLS 4⃣
-  type: vless
-  server: 104.21.48.16
+- name: '@vpnclashfa - 84'
+  type: vmess
+  server: 172.67.193.108
   port: 443
-  uuid: e959d53c-91e9-459d-a332-d59ae89b3b4c
-  udp: true
-  network: ws
-  tls: true
-  servername: hdfynpv2c1.farvaharforever.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /Iyq035lnud9R8ruNNrqGxZZ2
-    headers:
-      Host: hdfynpv2c1.farvaharforever.com
-- name: 🇺🇸 US 美国 18
-  type: vless
-  server: 104.21.59.169
-  port: 2087
-  uuid: b654f2d5-b650-4613-89a1-9dbc423216ed
-  udp: true
-  network: ws
-  tls: true
-  servername: turkws.configforvpn.fun
-  ws-opts:
-    path: /
-    headers:
-      Host: turkws.configforvpn.fun
-- name: 🇺🇸_US_美国_163
-  type: vless
-  server: 104.26.4.108
-  port: 8443
-  uuid: 60813b9d-aa0e-4a5c-88b8-ed231058e82a
-  udp: true
-  network: ws
-  tls: true
-  servername: pages.20230619.love
-  ws-opts:
-    path: telegram🇨🇳 @wangcai_8 /?ed=2048
-    headers:
-      Host: pages.20230619.love
-- name: 🇺🇸_US_美国->🇩🇪_DE_德国
-  type: vmess
-  server: 104.21.237.69
-  port: 80
-  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: a.prapt5.ir
-- name: 🇺🇸_US_美国_221
-  type: vless
-  server: 104.27.196.238
-  port: 80
-  uuid: 69f7d768-39bd-4ac0-97a2-4e283541e6e0
-  udp: true
-  network: ws
-  tls: true
-  servername: ejA2ST.ruBIKa.sPACE
-  ws-opts:
-    path: /backup
-    headers:
-      Host: ejA2ST.ruBIKa.sPACE
-- name: '@vpnclashfa - 56'
-  type: vmess
-  server: 151.101.2.216
-  port: 80
-  uuid: 545485da-9ff4-48c5-ae94-45e6e4ee7d26
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /racevpn
-    headers:
-      Host: 6606.com
-- name: 🏁RELAY-141.101.120.64-0796
-  type: vmess
-  server: 141.101.120.64
-  port: 2053
-  uuid: 381cb6d1-6ad4-4909-8494-b8d786cf78ce
+  uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   tls: true
+  servername: gwdef.sbs
   ws-opts:
-    path: /
+    path: /linkws
     headers:
-      Host: 1744007578.speed.zjgza.cccp.freefly.pp.ua
-- name: 美国+CloudFlare节点
-  type: trojan
-  server: 104.16.192.146
+      Host: gwdef.sbs
+- name: 🇺🇸/US/美国/242
+  type: vless
+  server: 162.159.196.138
   port: 443
-  password: 0ab6c98dae3b48e8b9c4a776b6c9c19a
-  udp: true
-  sni: jobscareertoday.com
-  network: ws
-  ws-opts:
-    path: 6b777a91
-    headers:
-      Host: jobscareertoday.com
-- name: 🇺🇸_US_美国->🇫🇮_FI_芬兰
-  type: trojan
-  server: 104.25.14.106
-  port: 2096
-  password: Mahanvpn
-  udp: true
-  sni: gajmahan.amnvpn.top
-  network: grpc
-  grpc-opts:
-    grpc-service-name: gajmahan.amnvpn.top
-- name: 🔷🆔@v2ray_configs_pool🔷
-  type: vmess
-  server: 172.67.204.84
-  port: 8080
-  uuid: e8b1500b-e9e8-5492-8312-f4eadf7d0767
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /nasnet/cdn
-    headers:
-      Host: nasnet-511952424.mcitel.co
-- name: 🏁RELAY-104.21.13.125-3251
-  type: vmess
-  server: 104.21.13.125
-  port: 80
-  uuid: 7e67dfca-3f0d-4ba1-a7e8-b272bcfc156f
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /vmess
-    headers:
-      Host: is2-vmess.sshmax.xyz
-- name: 🇺🇸_US_美国_153
-  type: vless
-  server: 162.159.129.70
-  port: 2053
-  uuid: 53a03718-def1-4b95-90fe-c7cffd75b897
-  udp: true
-  network: ws
-  tls: true
-  servername: iisBV2raYli.sTorMshOp.sBS
-  ws-opts:
-    path: /
-    headers:
-      Host: iisBV2raYli.sTorMshOp.sBS
-- name: 🇨🇷_CR_哥斯达黎加_5
-  type: vless
-  server: 190.93.244.103
-  port: 8443
   uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
   udp: true
   network: ws
   tls: true
-  servername: baipiao1.curly-train.pages.dev
+  servername: baipiao406.stunning-bassoon.pages.dev
   ws-opts:
-    path: /?ed
+    path: path/telegram@v2ray_alpha/?ed=2048
     headers:
-      Host: baipiao1.curly-train.pages.dev
-- name: Telegram:@config_proxy 🔥
+      Host: baipiao406.stunning-bassoon.pages.dev
+- name: '>>@FreakConfig::US'
   type: vless
-  server: 104.19.236.191
-  port: 443
-  uuid: 07bb719d-a300-4e08-acc3-fdebec273425
-  udp: true
-  network: ws
-  tls: true
-  servername: xxx.66500-280b-471c-b2b8-d68b7f9960012.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: xxx.66500-280b-471c-b2b8-d68b7f9960012.workers.dev
-- name: 🇺🇸_US_美国_201
-  type: vless
-  server: 172.67.79.181
-  port: 8443
-  uuid: a13df940-020c-465f-bc89-ee5279b5cd6a
-  udp: true
-  network: ws
-  tls: true
-  servername: ss031.wang66.homes
-  ws-opts:
-    path: /blue
-    headers:
-      Host: ss031.wang66.homes
-- name: '@Vip_Security join us - 403'
-  type: trojan
-  server: 104.21.40.34
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.gossipglove.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.gossipglove.com
-- name: 🏁RELAY-172.67.72.172-13426 github.com/zengfr/free-vpn-subscribe
-  type: vmess
-  server: 172.67.72.172
-  port: 443
-  uuid: 1bff15f1-a71d-4f07-b8bf-9471708eff8b
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /fthe4gsefgtdu
-    headers:
-      Host: nat.998808.xyz
-- name: 🇨🇦_CA_加拿大
-  type: vless
-  server: 23.227.39.133
-  port: 443
-  uuid: 1bab0961-b22c-411f-b955-09c4aed2d2c1
-  udp: true
-  network: ws
-  tls: true
-  servername: us4.hnkkt.top
-  ws-opts:
-    path: /gsjc/us4
-    headers: {}
-- name: 🇺🇸_US_美国_34
-  type: vless
-  server: 172.67.195.178
-  port: 8443
-  uuid: d342d11e-d424-4583-b36e-524ab1f0afa4
-  udp: true
-  network: ws
-  tls: true
-  servername: baipiao1.curly-train.pages.dev
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: baipiao1.curly-train.pages.dev
-- name: 香港-HK-2
-  type: vmess
-  server: 162.159.133.160
-  port: 443
-  uuid: 6738344c-12e4-4285-8423-2b4519e97b70
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  servername: v2ray.ryin.vip
-  ws-opts:
-    path: /ryinsocksv2board
-    headers:
-      Host: v2ray.ryin.vip
-- name: 美国+CloudFlare
-  type: trojan
-  server: 162.159.17.189
-  port: 443
-  password: humanity
-  udp: true
-  sni: www.multiplydose.com
-  network: ws
-  ws-opts:
-    path: /assignment
-    headers:
-      Host: www.multiplydose.com
-- name: github.com/freefq - 美国CloudFlare节点 13
-  type: vmess
-  server: 173.245.59.4
-  port: 2096
-  uuid: 782a6cec-9f6f-4b24-b780-938c3212d021
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  servername: sNAppfoOD2.EsMAIlkoREa.sHOp
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: sNAppfoOD2.EsMAIlkoREa.sHOp
-- name: 🇺🇸 美国 CloudFlare节点
-  type: vmess
-  server: 104.26.13.31
-  port: 2086
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: github.com/Alvin9999
-    headers:
-      Host: ip1.1789034.xyz
-- name: 🇺🇸_US_美国->🇩🇪_DE_德国-2
-  type: vless
-  server: 172.64.147.236
-  port: 443
-  uuid: c35050ce-01ab-45a9-91b8-54cec637d0a8
-  udp: true
-  network: ws
-  tls: true
-  servername: octopusss5.info
-  client-fingerprint: chrome
-  ws-opts:
-    path: /udfyfws
-    headers:
-      Host: octopusss5.info
-- name: 🏁RELAY-45.85.119.29-1576
-  type: vmess
-  server: 45.85.119.29
-  port: 443
-  uuid: 06A762E9-4BC9-405A-810E-B94AC078C772
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /speedtest/Kansas.kotick.site
-    headers:
-      Host: fragrant-pond-b786.salehielham2366007.workers.dev
-- name: Join+@Vmessq+|+Sv+Germany+🇩🇪
-  type: vless
-  server: 45.131.209.205
-  port: 443
-  uuid: eecaf152-1b1c-4428-af30-bb214d3afd30
-  udp: true
-  network: ws
-  tls: true
-  servername: gelws.mainssh.xyz
-  ws-opts:
-    path: /vless
-    headers:
-      Host: gelws.mainssh.xyz
-- name: 🇺🇸US_199 @jiediannh1
-  type: vless
-  server: 104.21.239.199
-  port: 80
-  uuid: c6ea407d-9f3f-4625-9dda-401837f0f68f
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2048
-    headers: {}
-- name: 🏁RELAY-172.67.196.16-1883
-  type: vmess
-  server: 172.67.196.16
-  port: 443
-  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /linkvws
-    headers:
-      Host: kellie.makeup
-- name: 🇺🇸+US+美国+81
-  type: vless
-  server: 89.116.180.161
-  port: 443
-  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-  udp: true
-  network: ws
-  tls: true
-  servername: juzibaipiao.5112233.xyz
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: juzibaipiao.5112233.xyz
-- name: 🇺🇸_US_美国
-  type: vless
-  server: 151.101.2.219
-  port: 80
-  uuid: b8b2a654-9c48-4373-90b8-e4335d386d8f
-  udp: true
-  network: ws
-  ws-opts:
-    path: /olem/ws?ed=1024
-    headers:
-      Host: foffmelo.com
-- name: 美国 CloudFlare节点
-  type: vmess
-  server: 104.17.129.28
-  port: 8080
-  uuid: 218996e0-5a6e-4806-8106-6b7b42e6d0d6
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: eu4.openxai.link
-- name: 🇺🇸US_5|2.1MB/s|GPT⁺|NF|D+|0%
-  type: vless
-  server: 69.46.46.35
-  port: 443
-  uuid: netherlands
-  udp: true
-  network: ws
-  tls: true
-  servername: node-7946883854-bfd146-production.up.railway.app
-  client-fingerprint: chrome
-  ws-opts:
-    path: /ws/netherlands
-    headers:
-      Host: node-7946883854-bfd146-production.up.railway.app
-- name: 🏁RELAY-104.21.11.169-1744
-  type: vmess
-  server: 104.21.11.169
-  port: 2052
-  uuid: cd5c880a-adff-4c09-b939-e72b4ab7bf19
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /public
-    headers:
-      Host: de5.biqibao.site
-- name: 🇨🇦_CA_加拿大-2
-  type: vmess
-  server: 23.227.39.84
-  port: 8080
-  uuid: 969f1909-c0d3-4c30-813d-3aec5c838b7d
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /1IKYjV0r/
-    headers:
-      Host: dongtaiwang13.dtku47.xyz
-- name: '[OpenRay] 🇨🇦 CA-11724'
-  type: vless
-  server: 104.16.72.113
-  port: 2086
-  uuid: ef23616d-8a9d-4b22-b2f5-9bda864de179
-  udp: true
-  network: ws
-  ws-opts:
-    path: /9om0kfpk0v09
-    headers:
-      Host: index.arcane509.workers.dev
-- name: '@Capital_NET'
-  type: vless
-  server: 66.235.200.51
+  server: 208.103.161.32
   port: 2053
-  uuid: a70e4c16-319a-49e4-bbe1-aa8c34d1380b
+  uuid: 1a25f8ad-cad2-4e93-b5bf-34e42bcac02a
   udp: true
-  network: grpc
+  network: ws
   tls: true
-  servername: figr1.blackflag.blog
+  servername: sni.111000.dynv6.net
   client-fingerprint: chrome
-  grpc-opts:
-    grpc-service-name: jkrv2ry
-- name: 🇺🇸 _US_美国 3
-  type: vmess
-  server: 141.101.115.30
-  port: 443
-  uuid: 40d496a6-ceeb-4096-baeb-4cc52b205621
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
   ws-opts:
-    path: /ECTCJ0DF
+    path: /?ed=2560
     headers:
-      Host: lg1.trump2023.us
-- name: NL_speednode_0016
-  type: trojan
-  server: 45.131.4.118
-  port: 443
-  password: MiTiVPN
-  udp: true
-  network: ws
-  ws-opts:
-    path: /MiTiVPN=Se
-    headers:
-      Host: 95r.ir
-- name: 🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 10
-  type: trojan
-  server: 172.67.181.173
-  port: 443
-  password: f282b878-8711-45a1-8c69-5564172123c1
-  udp: true
-  sni: vpn.stupidworld.web.id
-  network: ws
-  ws-opts:
-    path: /Tel-@V2ray_Alpha
-    headers:
-      Host: vpn.stupidworld.web.id
-- name: 🇺🇸 US 美国 39
-  type: vless
-  server: 104.25.64.85
-  port: 2053
-  uuid: cb5bea55-6523-4e6c-bcdf-b0515ce5e588
-  udp: true
-  network: grpc
-  tls: true
-  grpc-opts:
-    grpc-service-name: Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-
-- name: 🇬🇧英国4丨白嫖机场.com
-  type: vmess
-  server: 162.159.142.244
-  port: 80
-  uuid: 88bd03e6-5ada-42da-9e77-448cd8c60e13
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: uk3-n18sby2c2uwobdbq.mybestjj.com
-- name: tg+univstar/43
-  type: vmess
-  server: 141.101.115.120
-  port: 443
-  uuid: 33aa57df-1c93-4318-9fce-e850437ee781
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  tls: true
-  ws-opts:
-    path: /dongtaiwang.com
-    headers:
-      Host: lg1.cfcdn3.xyz
-- name: 🇺🇸 ShatakVPN 807920
-  type: ss
-  server: 67.220.95.26
-  port: 8080
-  cipher: chacha20-ietf-poly1305
-  password: 42000e02-6b4d-46ad-a572-80db7db2a9ce
-  udp: true
+      Host: sni.111000.dynv6.net
 - name: EPODONIOS
-  type: vless
-  server: 45.130.125.158
-  port: 2053
-  uuid: e7961655-9674-4cbd-a36f-ec0d5d7d660c
-  udp: true
-  network: ws
-  tls: true
-  servername: po.fastbrokencompony.com
-  ws-opts:
-    path: /
-    headers:
-      Host: po.fastbrokencompony.com
-- name: US🇺🇸
-  type: vless
-  server: 104.16.89.18
-  port: 443
-  uuid: e6eec2e9-f98d-4fd4-afac-c504123231cf
-  udp: true
-  network: ws
-  tls: true
-  servername: rukawa.pages.dev
-  ws-opts:
-    path: /
-    headers:
-      Host: rukawa.pages.dev
-- name: 🇺🇸_US_美国->🇫🇷_FR_法国
   type: vmess
-  server: 104.25.77.185
-  port: 2082
-  uuid: DCE76061-EE65-49DB-997C-A6A880DADE3A
+  server: 104.26.14.137
+  port: 80
+  uuid: 43dcdce1-3cea-4193-bc8d-90b92071d779
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   ws-opts:
-    path: /Lille.kotick.site:443/speedtest
+    path: /?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1/?de=2560
     headers:
-      Host: bold-mud-c089.owotaa.workers.dev
-- name: 🇺🇸_US_美国_275
-  type: vless
-  server: 162.159.0.33
-  port: 443
-  uuid: 60813b9d-aa0e-4a5c-88b8-ed231058e82a
+      Host: tr1-smart.adelping.com.
+- name: 美国(欢迎订阅Youtube破解资源君)
+  type: vmess
+  server: 104.16.162.16
+  port: 2053
+  uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
+  alterId: 0
+  cipher: auto
   udp: true
   network: ws
   tls: true
-  servername: pages.20230619.love
   ws-opts:
-    path: /?ed=2048
+    path: /eisasqa
     headers:
-      Host: pages.20230619.love
+      Host: foxus.fovi.tk
+- name: '💻 Channel 🆔 : @AlienVPN402 👽'
+  type: vless
+  server: 104.21.12.150
+  port: 2086
+  uuid: 8f07dc3b-8a0f-430f-a0fc-25e07760502c
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2048/Telegram:@https_config_injector
+    headers:
+      Host: nl54.vlessx.us
+- name: 更多节点搜TG@anzhuoapk_9
+  type: vless
+  server: 151.101.130.228
+  port: 443
+  uuid: 37ec7228-f4ea-4820-84ea-d4f101575851
+  udp: true
+  network: ws
+  tls: true
+  servername: pscresearch.faculty.ucdavis.edu
+  ws-opts:
+    path: ws/?ed=2048
+    headers:
+      Host: hvwrfuerhetitugj44yhrthj.com
+- name: 🇺🇸 ShatakVPN 475626
+  type: vless
+  server: 104.17.220.114
+  port: 80
+  uuid: 98f7d01d-e770-471f-80ff-8f480ad84f7c
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: divine-mode-ac41.amirss.workers.dev
 - name: 🏁RELAY-185.162.228.1-0157
   type: vmess
   server: 185.162.228.1
@@ -616,55 +122,419 @@ proxies:
     path: /ECTCJ0DF
     headers:
       Host: 154.v2ray3.xyz
-- name: 美国 CloudFlare节点-2
-  type: vmess
-  server: 198.41.217.5
-  port: 2087
-  uuid: b5f3c2a3-2177-4f1f-81bc-96fa23abe92f
-  alterId: 0
-  cipher: auto
+- name: 🇺🇸_US_美国_3
+  type: vless
+  server: 185.148.105.225
+  port: 8443
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
   udp: true
   network: ws
   tls: true
+  servername: juzibaipiao.5112233.xyz
   ws-opts:
-    path: /2v2rayTEAM
+    path: /?ed=2048
     headers:
-      Host: docs2.obneh247.ir
-- name: 🇺🇸 🇺🇸_US_美国_1
-  type: ss
-  server: 3.16.130.237
-  port: 443
-  cipher: aes-256-cfb
-  password: amazonskr05
-  udp: true
-- name: 104.18.3.2 ntls
-  type: vmess
-  server: 104.18.3.2
+      Host: juzibaipiao.5112233.xyz
+- name: 🇺🇸_US_美国
+  type: vless
+  server: 172.67.215.116
   port: 80
-  uuid: 1760dc4d-4ed4-4b97-8236-a3f55c8b7e8b
-  alterId: 0
-  cipher: auto
+  uuid: 5006d0f0-b05e-4e22-9cb0-ae64ae2f7965
   udp: true
   network: ws
   ws-opts:
-    path: /vmess-udp
+    path: /ZEUS_PANEL_BOT
     headers:
-      Host: nautica.foolvpn.me
-- name: 美国(欢迎订阅Youtube破解资源君)
-  type: vmess
-  server: 104.16.162.16
+      Host: zeus-panel-e7u1ul.zeus-e7o9eu.workers.dev
+- name: 🇺🇸+US+美国+14
+  type: vless
+  server: 104.18.206.42
+  port: 443
+  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
+  udp: true
+  network: ws
+  tls: true
+  servername: juzibaipiao.5112233.xyz
+  ws-opts:
+    path: /?ed=2048
+    headers:
+      Host: juzibaipiao.5112233.xyz
+- name: 🇺🇸US_美國
+  type: ss
+  server: 104.238.70.16
+  port: 443
+  cipher: none
+  password: 14b02e2a-8930-4afb-8412-ea4a4954ca5b
+  udp: true
+- name: '💻 Channel 🆔 : @AlienVPN402 👽-2'
+  type: vless
+  server: 188.114.96.127
   port: 2053
-  uuid: bf67437e-6c90-45ca-abc2-c7240a5ce2aa
+  uuid: 9e9550b3-93a9-43f6-95dc-a8b97a0b133f
+  udp: true
+  network: grpc
+  tls: true
+  servername: ligliyglyugliygghy.mic-mokhaderat-shatel-irancel-digikala.shop
+  client-fingerprint: chrome
+  grpc-opts:
+    grpc-service-name: Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-Telegramjoin:@V2ray_ip1-
+- name: 🔒 VL-WS-NONE 🏴‍☠️ NA-172.67.218.90:80
+  type: vless
+  server: 172.67.218.90
+  port: 80
+  uuid: 65b3cbba-e6ac-485a-9481-976a0415eab9
+  udp: true
+  network: ws
+  ws-opts:
+    path: /Fvy0Y7NJ7uucUDha?ed=2560
+    headers:
+      Host: bLue-sNoW-a243.GeleNE5962.wOrKeRS.dEV
+- name: 美国(TG频道:@kxswa)
+  type: vmess
+  server: 172.64.152.150
+  port: 443
+  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   tls: true
   ws-opts:
-    path: /eisasqa
+    path: /dongtaiwang.com
     headers:
-      Host: foxus.fovi.tk
+      Host: clash6.ssr-free.xyz
+- name: 美国_tg+univstar_89
+  type: vmess
+  server: 172.67.225.31
+  port: 443
+  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: 38.72img.xyz
+- name: 🌐سرور 850 | Esf-07| MTSRVRS
+  type: trojan
+  server: 172.67.134.185
+  port: 443
+  password: POORIARED
+  udp: true
+  sni: reDfRee8.REDFree8.ir
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiVUl6eXhLZkkwUTJ3ZzkiLCJwcm90b2NvbCI6InRyIiwibW9kZSI6InByb3h5aXAiLCJwYW5lbElQcyI6W119?ed
+    headers: {}
+- name: GB_speednode_0108
+  type: vless
+  server: 91.193.58.94
+  port: 8880
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  udp: true
+  network: ws
+  ws-opts:
+    path: /Telegram@WangCai2/?ed
+    headers:
+      Host: kjgx.laoyoutiao.link
+- name: 🇯🇵 Japan, Shibuya City [BL]
+  type: trojan
+  server: 23.227.38.33
+  port: 443
+  password: aff9928f-7ba3-45fb-b56d-4dec45653ca9
+  udp: true
+  sni: z9mifq7ujufk56im.jptimecsgo.xyz
+  network: ws
+  ws-opts:
+    path: /images
+    headers: {}
+- name: '@hkaa0||美国'
+  type: vless
+  server: 172.67.242.38
+  port: 2087
+  uuid: 884f9b2c-f0c5-44dd-a68e-3e39ce93bb39
+  udp: true
+  network: ws
+  tls: true
+  servername: cf-wkrs-pages-vless-aoy.pages.dev
+  ws-opts:
+    path: https://www.udomain.hk/sc/customer/case-study?_gl=1*1hsw0bx*_ga*mtewmje1mze2mc4xnjkyotixntu2*_ga_4n38ns1xjw*mty5ndi0mzgxmi40ljaumty5ndi0mzgxmi4wljauma..
+    headers: {}
+- name: 'Telegram: @vpnbaz'
+  type: vless
+  server: 104.26.15.69
+  port: 2096
+  uuid: 30f2d443-af46-4dd6-83c9-b5e17299ebd2
+  udp: true
+  network: ws
+  tls: true
+  servername: carlotta.shoorekeeper.cloudns.org
+  client-fingerprint: randomized
+  ws-opts:
+    path: /?ed=2560
+    headers:
+      Host: carlotta.shoorekeeper.cloudns.org
+- name: 🇺🇸⋺US⋺⟪@LonUp_M⟫⋺181
+  type: vmess
+  server: 104.16.209.12
+  port: 8880
+  uuid: 0c664f44-9f69-454f-841a-4616715df26f
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: a7.iraniancp.fun
+- name: github.com/freefq - 美国CloudFlare节点 18
+  type: vmess
+  server: 198.41.203.2
+  port: 443
+  uuid: 176b598f-445b-41ac-9d2a-430c5c4df26a
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /dongtaiwang.com
+    headers:
+      Host: clash1.trump2023.net
+- name: 美国+V2CROSS.COM
+  type: vless
+  server: 199.232.22.39
+  port: 443
+  uuid: 891710f4-45f3-41b1-99a6-6f1510f83c10
+  udp: true
+  network: ws
+  tls: true
+  servername: ssl.fastly.com
+  ws-opts:
+    path: /TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER?ed
+    headers:
+      Host: pan21.global.ssl.fastly.net
+- name: '@v2rayNG_VPNN'
+  type: trojan
+  server: 45.95.241.101
+  port: 2087
+  password: Go5e2nKM9U
+  udp: true
+  sni: aa.v2jey.fun
+  network: ws
+  ws-opts:
+    path: JoinUs@v2rayNG_VPNN
+    headers:
+      Host: aa.v2jey.fun
+- name: github.com/freefq - 美国CloudFlare节点 9
+  type: vmess
+  server: 172.67.169.131
+  port: 443
+  uuid: c5a2d7b8-bf84-4f97-8577-b9b87f2baaf7
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /AUIKN8AU
+    headers:
+      Host: oplg1.cfcdn2.xyz
+- name: Join+@Vmessq+|+Sv+Germany+🇩🇪
+  type: vless
+  server: 45.131.209.205
+  port: 443
+  uuid: eecaf152-1b1c-4428-af30-bb214d3afd30
+  udp: true
+  network: ws
+  tls: true
+  servername: gelws.mainssh.xyz
+  ws-opts:
+    path: /vless
+    headers:
+      Host: gelws.mainssh.xyz
+- name: 🏁RELAY-172.67.189.60-4266
+  type: vmess
+  server: 172.67.189.60
+  port: 80
+  uuid: 892ebb75-7055-3007-8d16-356e65c6a49a
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /skincare
+    headers:
+      Host: fr2c.newliving.top
+- name: '@V2rayNG3'
+  type: vless
+  server: 104.21.1.12
+  port: 443
+  uuid: f6bd2c47-99da-4bca-bf70-7186aa9e7e06
+  udp: true
+  network: ws
+  tls: true
+  servername: pHOTOgrApHipiCTureaI.IR
+  client-fingerprint: randomized
+  ws-opts:
+    path: /telegram@V2ray_Alpha/?ed=2560
+    headers:
+      Host: photographipictureai.ir
+- name: 🇺🇸 ShatakVPN 807920
+  type: ss
+  server: 67.220.95.26
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: 42000e02-6b4d-46ad-a572-80db7db2a9ce
+  udp: true
+- name: 🇺🇸US(AzadNet.t.me)_455
+  type: trojan
+  server: 104.21.14.95
+  port: 443
+  password: 01a7ed92-3ff7-4872-84a8-fcb4757783c7
+  udp: true
+  sni: rsfndc1.cpionline.us
+  skip-cert-verify: true
+- name: 美国+CloudFlare节点
+  type: trojan
+  server: 104.18.33.209
+  port: 443
+  password: '666'
+  udp: true
+  sni: gdurt.ia6o.2s1.hh.penqiask.ccwu.cc
+  network: ws
+  ws-opts:
+    path: /glasspanel/guest000_0_5de14443985f/
+    headers: {}
+- name: ❓Other_6 | ⬇️ 1.8MB/s
+  type: vless
+  server: 5.10.215.177
+  port: 8880
+  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /Telegram🇨🇳 @WangCai2 /?ed=2560
+    headers:
+      Host: ip.langmanshanxi.top
+- name: t.me/Config_Station
+  type: vless
+  server: 104.21.27.152
+  port: 80
+  uuid: 1d0d7f6e-a8f4-4403-b492-65e702f8a481
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: dbdid89lh.事出场次以运7.tech
 - name: EPODONIOS-2
+  type: vless
+  server: 104.21.11.152
+  port: 8080
+  uuid: d7a8ae86-9904-4f71-8fe4-d754ded610d7
+  udp: true
+  network: ws
+  ws-opts:
+    path: /eyJqdW5rIjoiOHNqQ3Bqc2dTZlppTEl1IiwicHJvdG9jb2wiOiJ2bCIsIm1vZGUiOiJwcmVmaXgiLCJwYW5lbElQcyI6WyJbMmEwMjo4OTg6MTQ2OjY0OjpdIl19?ed=2560
+    headers:
+      Host: server6.diwir81236.workers.dev
+- name: 美国 CloudFlare节点
+  type: vmess
+  server: 104.21.228.20
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2048&Telegram🇨🇳
+    headers:
+      Host: a.prapt1.ir
+- name: EPODONIOS-3
+  type: vless
+  server: 45.130.125.158
+  port: 2053
+  uuid: e7961655-9674-4cbd-a36f-ec0d5d7d660c
+  udp: true
+  network: ws
+  tls: true
+  servername: po.fastbrokencompony.com
+  ws-opts:
+    path: /
+    headers:
+      Host: po.fastbrokencompony.com
+- name: 🇺🇸_US_美国-2
+  type: vless
+  server: 172.66.156.81
+  port: 80
+  uuid: d59dbeb7-3989-4f4c-aed8-ac5fbd9c1a7a
+  udp: true
+  network: ws
+  ws-opts:
+    path: /@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy----@Shh_Proxy
+    headers:
+      Host: websocket.network.www.speedtest.net.flutter.dev.russia.pyt.digitalcity5.xyz.
+- name: 🏁RELAY-203.30.191.19-1770
+  type: vmess
+  server: 203.30.191.19
+  port: 443
+  uuid: 5f64fa65-7b14-49c5-954d-aa15c6bfcacd
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /dongtaiwang.com
+    headers:
+      Host: 203.30.191.19
+- name: US_speednode_0407
+  type: vless
+  server: 192.0.63.213
+  port: 8880
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: jp.laoyoutiao.link
+- name: 🏳️ ShatakVPN 197181
+  type: vless
+  server: 151.101.65.164
+  port: 80
+  uuid: da48859d-edf9-4a8c-a026-80910591f284
+  udp: true
+  network: xhttp
+- name: 🇮🇳印度3 | ⬇️ 4.2MB/s
+  type: vless
+  server: 104.27.125.158
+  port: 443
+  uuid: 1e5599e3-325c-49fa-a6c7-675e314a0d99
+  udp: true
+  network: ws
+  tls: true
+  servername: in4s.pqvip.top
+  client-fingerprint: chrome
+  ws-opts:
+    path: /pq/in4
+    headers:
+      Host: in4s.pqvip.top
+- name: NL_speednode_0016
+  type: trojan
+  server: 45.131.4.118
+  port: 443
+  password: MiTiVPN
+  udp: true
+  network: ws
+  ws-opts:
+    path: /MiTiVPN=Se
+    headers:
+      Host: 95r.ir
+- name: EPODONIOS-4
   type: vmess
   server: 104.17.77.77
   port: 8443
@@ -678,434 +548,216 @@ proxies:
     path: /lMnsZUN4/
     headers:
       Host: v2ray1.dozapp.xyz
-- name: 🇺🇸_US_美国->🇩🇪_DE_德国-3
+- name: '@meli_proxyy'
   type: vless
-  server: 104.25.70.52
+  server: 104.26.2.186
   port: 443
-  uuid: a0cdf51b-e97d-4e87-9976-ed272b617c09
+  uuid: 401374e6-df77-41fb-f638-dad8184f175b
   udp: true
-  network: ws
+  network: grpc
   tls: true
-  servername: dl165.vipiroshd.shop
-  ws-opts:
-    path: /apiapp
-    headers: {}
-- name: 🇸🇪_SE_瑞典
-  type: trojan
-  server: 193.180.211.52
-  port: 443
-  password: 72a9357f-8841-4229-ad79-c3fdee0aae51
-  udp: true
-  sni: joss.dus.biz.id
-  network: ws
-  ws-opts:
-    path: /Free-VPN-CF-Geo-Project/193.180.211.52=443
-    headers: {}
-- name: 🇦🇪 AE 85.237.211.219 ◈ ws:80 ◈ Zenlayer Inc ◈ 78682
+  servername: pqh31v7.hiddendom.shop
+  grpc-opts:
+    grpc-service-name: ''
+- name: 13|FR_speednode_0008
   type: vless
-  server: speed.cloudflare.com
-  port: 80
-  uuid: 7996d412-0b2a-4533-bba1-f7531861f1ec
+  server: 51.210.151.165
+  port: 8443
+  uuid: 6202b230-417c-4d8e-b624-0f71afa9c75d
   udp: true
   network: ws
   ws-opts:
-    path: /vless/
+    path: /?ed=2560security=tls
     headers:
-      Host: ul-uae2.09vpn.com
-- name: 香港4|@ripaojiedian
+      Host: sni.111000.v6.navy
+- name: '0008 | 183. 🇫🇮 VLESS | TG: @wlrustg'
+  type: vless
+  server: 5.61.89.225
+  port: 32061
+  uuid: 0df23c07-b289-4d65-822a-228478ca73bd
+  udp: true
+  tls: true
+  servername: eh.vk.com
+  client-fingerprint: chrome
+  reality-opts:
+    public-key: e2yc3QjJ1spCe1eLR9cMd_2-TieGJKs2sLKlfW2L-xo
+    short-id: ''
+  flow: xtls-rprx-vision
+- name: 东京2-80
   type: vmess
-  server: 103.232.213.241
-  port: 443
-  uuid: d0fa8fa7-e217-4fb9-fed3-34c6a17851db
+  server: 138.2.22.167
+  port: 80
+  uuid: ab607826-c62c-44e3-bd74-8fb2657e5edf
   alterId: 0
   cipher: auto
   udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: 103.232.213.241
 - name: trojan
   type: trojan
   server: nl-trojan.bonds.id
   port: 443
   password: 7e6256a0-b4ab-11eb-bc8f-1239d0255272
   udp: true
-- name: vuclip
-  type: trojan
-  server: zaintest.vuclip.com
-  port: 443
-  password: t.me%2Ffoolvpn
-  udp: true
-  sni: zaintest.vuclip.com.nautica.foolvpn.me
-  network: ws
-  ws-opts:
-    path: /trojan-udp
-    headers:
-      Host: zaintest.vuclip.com.nautica.foolvpn.me
-- name: Test VLESS
+- name: test-vless-none
   type: vless
   server: example.com
   port: 443
-  uuid: 12345678-1234-1234-1234-123456789abc
+  uuid: 12345678-1234-1234-1234-123456789012
   udp: true
   network: ws
-  tls: true
   ws-opts:
-    path: /path
+    path: /test
     headers:
       Host: example.com
-- name: 🇺🇸 United States - NA 🌎 VL-WS-TLS 4⃣
-  type: vless
-  server: 198.62.62.229
-  port: 443
-  uuid: 6c11247b-6078-461a-93d5-22e4df284e6d
-  udp: true
-  network: ws
-  tls: true
-  servername: mirror.fullmargintraders.com
-  client-fingerprint: chrome
-  ws-opts:
-    path: /wsv/6c11247b-6078-461a-93d5-22e4df284e6d
-    headers:
-      Host: mirror.fullmargintraders.com
-- name: 🇺🇸 US 美国 83
-  type: vless
-  server: 104.21.48.84
-  port: 443
-  uuid: e28bb3f8-e64a-4419-9496-33c46220354b
-  udp: true
-  network: ws
-  tls: true
-  servername: sdgf.bdfstt.sbs
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: sdgf.bdfstt.sbs
-- name: 🇺🇸_US_美国_178
-  type: vless
-  server: 162.159.152.4
-  port: 2087
-  uuid: 3a4c5a76-046b-4094-8528-f2882ed9b492
-  udp: true
-  network: ws
-  tls: true
-  servername: irancpi.cPiONLiNE.Us
-  ws-opts:
-    path: vless-ws/?ed=2048
-    headers:
-      Host: irancpi.cPiONLiNE.Us
-- name: 🇺🇸_US_美国->🇩🇪_DE_德国-4
+- name: '@vpnclashfa - 73'
   type: vmess
-  server: 104.21.225.225
-  port: 80
-  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /
-    headers:
-      Host: a.prapt5.ir
-- name: 🇺🇸_US_美国_125
-  type: vless
-  server: 104.17.210.36
-  port: 2096
-  uuid: 875e0c54-2690-4bfb-a4e5-d44bcf9d2a31
-  udp: true
-  network: ws
-  tls: true
-  servername: kyd.cloudns.org
-  ws-opts:
-    path: path/telegram@v2ray_alpha/?ed=2048
-    headers:
-      Host: kyd.cloudns.org
-- name: '@vpnclashfa - 34'
-  type: vmess
-  server: 104.26.0.138
-  port: 8880
-  uuid: 90f8f4dc-8092-4355-9047-05f506f5e9ab
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /github.com/Alvin9999
-    headers:
-      Host: m1.106778.xyz
-- name: 🏁RELAY-172.67.183.220-0072
-  type: vmess
-  server: 172.67.183.220
+  server: 172.67.174.42
   port: 443
-  uuid: 950db6aa-4926-4616-816e-ec0312dcb87b
+  uuid: bc864078-dcf3-4bf4-8dbf-ca9f200b56be
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   tls: true
-  servername: jahfkjha.cfd
+  servername: gwdef.sbs
   ws-opts:
     path: /linkws
     headers:
-      Host: jahfkjha.cfd
-- name: 美国 CloudFlare节点-3
+      Host: gwdef.sbs
+- name: 🏁RELAY-172.67.68.246-0140
   type: vmess
-  server: 104.21.220.186
-  port: 80
-  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2048&Telegram🇨🇳 @WangCai_8
-    headers:
-      Host: a.prapt1.ir
-- name: 🏁RELAY-104.21.4.6-0191
-  type: vmess
-  server: 104.21.4.6
+  server: 172.67.68.246
   port: 443
-  uuid: 1052f24e-7b09-45eb-b0c5-d858eb124192
+  uuid: 03fcc618-b93d-6796-6aed-8a38c975d581
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   tls: true
-  servername: glweidf.cfd
+  servername: vip2323.cfd
   ws-opts:
-    path: /linkws
+    path: /linkvws
     headers:
-      Host: glweidf.cfd
-- name: XX 🏳️ ┇ VMESS-WS-NTLS - CLOUDFLARENET ┇ 104.24.169.183
-  type: vmess
-  server: 104.24.169.183
-  port: 8080
-  uuid: nasnet
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /NASNET/cdn#/?BIA_TELEGRAM@AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1_AZARBAYJAB1?ed=2560
-    headers: {}
-- name: 🇺🇸_US_美国->🇳🇱_NL_荷兰
+      Host: vip2323.cfd
+- name: 🌐|UN|@mobilesignal
   type: vless
-  server: 104.21.16.162
-  port: 443
-  uuid: 376b9861-2fc6-4647-959c-18185cd9c95a
-  udp: true
-  network: ws
-  tls: true
-  servername: lmn37.sbs
-  ws-opts:
-    path: /fflsws
-    headers: {}
-- name: 🇺🇸_US_美国_52
-  type: vless
-  server: 104.27.62.243
-  port: 443
-  uuid: 884f9b2c-f0c5-44dd-a68e-3e39ce93bb39
-  udp: true
-  network: ws
-  tls: true
-  servername: cf-wkrs-pages-vless-aoy.pages.dev
-  ws-opts:
-    path: /?ed
-    headers:
-      Host: cf-wkrs-pages-vless-aoy.pages.dev
-- name: 🇺🇸_US_美国_108
-  type: vless
-  server: 172.67.204.84
-  port: 2087
-  uuid: bcca8554-dc5b-4b9e-979b-a465ae275349
-  udp: true
-  network: ws
-  tls: true
-  servername: de6.vlessx.us
-  ws-opts:
-    path: telegram:@vpnhub69,telegram:@vpnhub69,telegram:@vpnhub69,telegram:@vpnhub69,
-    headers:
-      Host: de6.vlessx.us
-- name: Telegram:@config_proxy 🔥-2
-  type: vless
-  server: 141.193.213.187
-  port: 443
-  uuid: 0f677eb7-bd99-4939-9327-a5d0334d4e04
-  udp: true
-  network: ws
-  tls: true
-  servername: xxx.66500-280b-471c-b2b8-d68b7f9960011.workers.dev
-  client-fingerprint: chrome
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: xxx.66500-280b-471c-b2b8-d68b7f9960011.workers.dev
-- name: 🇺🇸_US_美国_167
-  type: vless
-  server: 104.20.25.222
-  port: 2087
-  uuid: a13df940-020c-465f-bc89-ee5279b5cd6a
-  udp: true
-  network: ws
-  tls: true
-  servername: ss031.wang66.homes
-  ws-opts:
-    path: /blue
-    headers:
-      Host: ss031.wang66.homes
-- name: '@Vip_Security join us - 395'
-  type: trojan
-  server: 172.64.80.1
-  port: 443
-  password: 5cccb4da-8aee-4b01-be84-2056265e52dc
-  udp: true
-  sni: nMk.288288.sHOP
-  network: ws
-  ws-opts:
-    path: /hV829BTVzg35A6ueyyZnWd
-    headers:
-      Host: nMk.288288.sHOP
-- name: 🇺🇸_US_美国->🇧🇷_BR_巴西 github.com/zengfr/free-vpn-subscribe
-  type: vmess
-  server: 162.159.255.119
-  port: 2095
-  uuid: 417d27fb-cb93-3bd8-9bf7-71cd91319821
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: /hgcefomn
-    headers:
-      Host: amszx.66666654.xyz
-- name: 🇧🇬+BG+保加利亚+42
-  type: vless
-  server: 147.78.140.199
-  port: 8443
-  uuid: f775978b-6e22-41a8-ae5e-5f9779e6745f
-  udp: true
-  network: ws
-  tls: true
-  servername: juzibaipiao.5112233.xyz
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: juzibaipiao.5112233.xyz
-- name: 🇺🇸_US_美国_111
-  type: vless
-  server: 104.18.53.172
-  port: 443
-  uuid: 35eeca70-7160-4136-9071-ce587820fd7e
-  udp: true
-  network: ws
-  tls: true
-  servername: x3.gem1.cfd
-  ws-opts:
-    path: /
-    headers:
-      Host: x3.gem1.cfd
-- name: cf.090227.xyz
-  type: vless
-  server: 89.116.250.34
-  port: 80
-  uuid: 80bc4fe9-8d42-4993-8ca7-6a154b353f77
+  server: 104.18.13.229
+  port: 2052
+  uuid: 25efc727-e853-49ba-9609-3c20009d0e7a
   udp: true
   network: ws
   ws-opts:
     path: /?ed=2560
     headers:
-      Host: 19860524.us.kg
-- name: 美国+CloudFlare节点-2
-  type: vless
-  server: 172.64.52.240
-  port: 443
-  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
-  udp: true
-  network: ws
-  tls: true
-  servername: t1s1.rittbo.kdns.fr
-  client-fingerprint: chrome
-  ws-opts:
-    path: /
-    headers:
-      Host: t1s1.rittbo.kdns.fr
-- name: 🇺🇸 美国 CloudFlare节点-2
+      Host: winbiss-0tpka6-v1.winbiss.workers.dev
+- name: EPODONIOS-5
   type: vmess
-  server: 162.159.140.91
-  port: 2086
-  uuid: e9e3cc13-db48-4cc1-8c24-7626439a5339
-  alterId: 0
-  cipher: auto
-  udp: true
-  network: ws
-  ws-opts:
-    path: github.com/Alvin9999
-    headers:
-      Host: ip1.1789034.xyz
-- name: 🇵🇱_PL_波兰
-  type: vless
-  server: 82.40.62.17
+  server: 102.177.189.101
   port: 443
-  uuid: 7499f0a0-3670-4cf6-a31c-ad4cd943cf18
-  udp: true
-  tls: true
-  servername: pl.hagrid-connected.com
-  client-fingerprint: chrome
-  flow: xtls-rprx-vision
-- name: 🏁RELAY-104.16.207.87-1845
-  type: vmess
-  server: 104.16.207.87
-  port: 2083
-  uuid: da37a316-d17b-493f-bd6e-b58a23e31823
+  uuid: 8f74ec8a-971c-11ed-a8fc-0242ac120002
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   tls: true
+  servername: 4fc128ce-4845-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
   ws-opts:
-    path: /foryourtestmyfriends2083
+    path: /4fc128ce-4845-11f0-a948-6a75f667b472?ed=2365
     headers:
-      Host: foryourtestmyfriends.hesam5a.tk
-- name: '@V2ray_NG🇫🇮'
-  type: vless
-  server: 104.16.219.215
+      Host: 4fc128ce-4845-11f0-a948-6a75f667b472.ShomaParvazRoYadetonNist-BypassIsHere.lat
+- name: 欧洲(欢迎订阅Youtube破解资源君)
+  type: vmess
+  server: 103.164.81.46
   port: 443
-  uuid: f0b09670-9e9a-48f2-acd5-5b6cc33c83c5
+  uuid: 5c70da5d-e641-3bf8-b7dc-5babd843ff3c
+  alterId: 2
+  cipher: auto
   udp: true
   network: ws
   tls: true
-  servername: cdir-0304.wlfvip.shop
   ws-opts:
-    path: /vlws?ed=2048
+    path: /ray
     headers:
-      Host: cdir-0304.wlfvip.shop
-- name: 🇺🇸US_181 @jiediannh1
+      Host: 0320hk567.fans8.xyz
+- name: '💻 Channel 🆔 : @AlienVPN402 👽-3'
   type: vless
-  server: 104.21.239.181
-  port: 80
-  uuid: c6ea407d-9f3f-4625-9dda-401837f0f68f
+  server: 170.114.46.79
+  port: 443
+  uuid: 8a5d06d3-67af-43db-9632-54474883b3eb
   udp: true
   network: ws
+  tls: true
+  servername: test.worse.workers.dev
   ws-opts:
     path: /?ed=2048
-    headers: {}
-- name: 🇺🇸_US_美国->🇩🇪_DE_德国-5
-  type: vmess
-  server: 104.21.230.33
+    headers:
+      Host: test.worse.workers.dev
+- name: 永久节点订阅TG@anzhuoapk_2320
+  type: vless
+  server: 172.64.35.129
   port: 80
-  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  uuid: b5cdabf0-e048-4fa2-90da-9379b1a4926e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /b5cdabf0-e04
+    headers:
+      Host: cc.ailicf.us.kg
+- name: 🇺🇸 ShatakVPN 239155
+  type: trojan
+  server: 8.39.125.191
+  port: 2083
+  password: Nova-Proxy
+  udp: true
+  sni: spring-queen-a95f.cewon19053.workers.dev
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: spring-queen-a95f.cewon19053.workers.dev
+- name: 🏁RELAY-104.19.170.36-1776
+  type: vmess
+  server: 104.19.170.36
+  port: 80
+  uuid: c0942f3d-58cd-43a9-8282-1bcc3b9f291e
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   ws-opts:
-    path: /
+    path: /uitsrt
     headers:
-      Host: a.prapt5.ir
-- name: 美国 CloudFlare节点-4
+      Host: freefrlxc.argotus.live
+- name: 美国 CloudFlare节点-2
   type: vmess
-  server: 104.21.231.57
+  server: 104.16.155.10
+  port: 2052
+  uuid: 4b36625c-b9d9-3ea6-aed5-86d62c70e16d
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /dabai.in104.25.175.137
+    headers:
+      Host: 100-102-247-92.s1.db-link02.top
+- name: 🇺🇸_US_美国->🇩🇪_DE_德国
+  type: vless
+  server: 172.64.147.236
+  port: 443
+  uuid: c35050ce-01ab-45a9-91b8-54cec637d0a8
+  udp: true
+  network: ws
+  tls: true
+  servername: octopusss5.info
+  client-fingerprint: chrome
+  ws-opts:
+    path: /udfyfws
+    headers:
+      Host: octopusss5.info
+- name: 美国 CloudFlare节点-3
+  type: vmess
+  server: 104.21.234.51
   port: 80
   uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
   alterId: 0
@@ -1116,91 +768,141 @@ proxies:
     path: /?ed=2048&Telegram🇨🇳
     headers:
       Host: a.prapt1.ir
-- name: 04-USA
+- name: DE VLESS-115
   type: vless
-  server: 51.81.223.225
-  port: 11094
-  uuid: f1fa0ad9-b122-4b7c-da82-4bea9edc48dd
+  server: 108.162.193.217
+  port: 443
+  uuid: 94daa8ad-75ed-4dbf-a6de-d05036d98df5
   udp: true
+  network: ws
   tls: true
-  servername: www.yahoo.com
-  client-fingerprint: chrome
-  reality-opts:
-    public-key: 9dnXiXxP4xgvtTVRj9SBFdyO6mjGvVhWD8qVZZLCCCk
-    short-id: a356addf
-  flow: xtls-rprx-vision
-- name: 🇺🇸_US_美国_64
+  servername: vangoghhh.info
+  ws-opts:
+    path: /tixvuws
+    headers:
+      Host: vangoghhh.info
+- name: '💻 Channel 🆔 : @AlienVPN402 👽-4'
   type: vless
-  server: 104.21.92.198
+  server: 172.67.155.64
+  port: 443
+  uuid: b3f17d95-32ef-4a73-aa31-329417a6b72c
+  udp: true
+  network: grpc
+  tls: true
+  servername: mast.kanal-tel-nufilter.site
+  client-fingerprint: firefox
+  grpc-opts:
+    grpc-service-name: Telegram:@NUFiLTER-Telegram:@NUFiLTER-Telegram:@NUFiLTER-Telegram:@NUFiLTER-Telegram:@NUFiLTER-Telegram:@NUFiLTER-Telegram:@NUFiLTER-Telegram:@NUFiLTER-Telegram:@NUFiLTER-Telegram:@NUFiLTER-Telegram:@NUFiLTER
+- name: 🇳🇱 Netherlands - 37
+  type: vless
+  server: 45.131.209.130
   port: 8443
-  uuid: a2dadb95-3f15-4e1c-b517-0b54c336a5fd
+  uuid: 57ba2ab1-a283-42eb-82ee-dc3561a805b8
   udp: true
   network: ws
   tls: true
-  servername: nl57.Vlessx.us
+  servername: ovhwuxian.pai50288.uk
+  client-fingerprint: chrome
   ws-opts:
-    path: /?ed=2048
+    path: /57ba2ab1
     headers:
-      Host: nl57.Vlessx.us
-- name: 🇸🇬SG_1|4.9MB/s|GPT⁺|YT-SG|NF|D+|GM|0%
-  type: trojan
-  server: 104.18.33.209
-  port: 443
-  password: '666'
-  udp: true
-  sni: gdurt.ia6o.2s1.hh.penqiask.ccwu.cc
-  network: ws
-  ws-opts:
-    path: /glasspanel/guest000_0_5de14443985f/
-    headers: {}
-- name: 🇺🇸_US_美国->🇳🇱_NL_荷兰-2
-  type: vless
-  server: 104.17.88.212
-  port: 443
-  uuid: 376b9861-2fc6-4647-959c-18185cd9c95a
-  udp: true
-  network: ws
-  tls: true
-  servername: lmn37.sbs
-  ws-opts:
-    path: /fflsws
-    headers: {}
-- name: 🇺🇸_US_美国-2
-  type: trojan
-  server: 192.9.132.73
-  port: 80
-  password: 4bfa6b63-ebd8-4e32-aac0-c9e7efd1c97f
-  udp: true
-  sni: sourceforge.net
-  skip-cert-verify: true
-- name: '[OpenRay] 🇨🇦 CA-11717'
-  type: vless
-  server: 104.18.13.229
-  port: 2052
-  uuid: 12d75b7d-8fdf-4785-8d62-d836854e7e63
-  udp: true
-  network: ws
-  ws-opts:
-    path: /?ed=2560
-    headers:
-      Host: parking-nfchbwa1-v2.parking-1ab.workers.dev
-- name: 🇬🇧[openproxylist.com] vmess-GB
+      Host: ovhwuxian.pai50288.uk
+- name: 美国/tg+univstar/137
   type: vmess
-  server: www.meter.net
-  port: 2083
-  uuid: d218dfe5-fae6-408e-b615-8666df7f0924
+  server: 172.67.224.96
+  port: 443
+  uuid: 99ffa102-6675-42c0-89c5-2c3cebb11640
   alterId: 0
   cipher: auto
   udp: true
   network: ws
   tls: true
   ws-opts:
-    path: /wssss
+    path: /ray22
     headers:
-      Host: blaze-uk-48.pinkle7.site
-- name: 🇺🇸 _CR_哥斯达黎加->🇺🇸_US_美国
+      Host: d.v2ray2333.tk
+- name: 美国_tg+univstar_101
   type: vmess
-  server: 190.93.244.3
+  server: 172.67.125.28
+  port: 443
+  uuid: 81d93f62-15a2-4994-adb9-0b5d906aac7e
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: 38.72img.xyz
+- name: 🌐سرور 808 | Esf-07| MTSRVRS
+  type: vless
+  server: 104.18.12.149
+  port: 2052
+  uuid: 2271c50f-ac7a-4d7f-8b04-64085b0daa56
+  udp: true
+  network: xhttp
+- name: GB_speednode_0090
+  type: vless
+  server: 91.193.58.120
+  port: 8880
+  uuid: fab7bf9c-ddb9-4563-8a04-fb01ce6c0fbf
+  udp: true
+  network: ws
+  ws-opts:
+    path: /Telegram@WangCai2/?ed
+    headers:
+      Host: kjgx.laoyoutiao.link
+- name: 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) [BL]
+  type: ss
+  server: 193.29.139.152
+  port: 8080
+  cipher: chacha20-ietf-poly1305
+  password: oZIoA69Q8yhcQV8ka3Pa3A
+  udp: true
+- name: '@hkaa0||美国-2'
+  type: vmess
+  server: 104.16.0.118
+  port: 2082
+  uuid: 4c9eb135-ef97-4ebf-f041-ac06acda3cee
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /fjdsh
+    headers:
+      Host: tg1.mianfenyun012.eu.org
+- name: 'Telegram: @vpnbaz-2'
+  type: vless
+  server: 172.67.145.177
+  port: 2096
+  uuid: a739ad80-0aab-40b2-9b0e-8192c74287ef
+  udp: true
+  network: ws
+  tls: true
+  servername: faruzan.changli.ddns-ip.net
+  client-fingerprint: random
+  ws-opts:
+    path: /proxyip=navia.shorekeeper.ir
+    headers:
+      Host: faruzan.changli.ddns-ip.net
+- name: 🇺🇸⋺US⋺⟪@LonUp_M⟫⋺67
+  type: vmess
+  server: 173.245.59.168
+  port: 8080
+  uuid: 27848739-7e62-4138-9fd3-938a63964b6b
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /KTR
+    headers:
+      Host: 2.arvanktbr.store
+- name: github.com/freefq - 美国CloudFlare节点 4
+  type: vmess
+  server: 141.101.114.31
   port: 443
   uuid: 56a2188b-2ab7-402c-b9b8-34847fdf0958
   alterId: 0
@@ -1212,6 +914,244 @@ proxies:
     path: /5QNROSRV
     headers:
       Host: oplg1.zhujicn2.com
+- name: 美国+CloudFlare节点-2
+  type: vless
+  server: 172.64.52.18
+  port: 443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: '@v2rayNG_VPNN-2'
+  type: trojan
+  server: 188.42.88.252
+  port: 2087
+  password: Go5e2nKM9U
+  udp: true
+  sni: aa.v2jey.fun
+  network: ws
+  ws-opts:
+    path: JoinUs@v2rayNG_VPNN
+    headers:
+      Host: aa.v2jey.fun
+- name: 🇺🇸tg频道:@sharingnode
+  type: vmess
+  server: 172.67.199.34
+  port: 443
+  uuid: 17b2a313-37a0-4945-a8e4-e63375506b4a
+  alterId: 0
+  cipher: zero
+  udp: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /A2DJOPFT
+    headers:
+      Host: lg10.cfcdn1.xyz
+- name: '@V2rayN_Free'
+  type: vless
+  server: 45.85.119.44
+  port: 2083
+  uuid: 01973bf7-048a-4dc6-a82b-2fa3be7046a5
+  udp: true
+  network: grpc
+  tls: true
+  servername: dagh.mojavadd.space
+  grpc-opts:
+    grpc-service-name: dagh.mojavadd.space
+- name: 🏁RELAY-104.27.97.42-6820
+  type: vmess
+  server: 104.27.97.42
+  port: 8443
+  uuid: aa0c4744-9568-4bee-a08b-73668a9b2a42
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  servername: cloudconebbb.gorgorchicken.one
+  ws-opts:
+    path: /cloudconebbb
+    headers:
+      Host: cloudconebbb.gorgorchicken.one
+- name: '@V2rayNG3-2'
+  type: vless
+  server: 190.93.247.56
+  port: 2082
+  uuid: 459447f6-3440-48f5-a0fa-de9c22d8d613
+  udp: true
+  network: httpupgrade
+- name: 🇸🇬 ShatakVPN 749147
+  type: vmess
+  server: 43.159.99.31
+  port: 443
+  uuid: f89a6eaf-0436-414f-8811-0cf68d793f55
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  servername: csdn.usdone.one
+  ws-opts:
+    path: /ddddddddd
+    headers:
+      Host: csdn.usdone.one
+- name: 🇺🇸US(AzadNet.t.me)_456
+  type: trojan
+  server: 172.67.159.13
+  port: 443
+  password: 0190d3f0-0691-11ef-aa0a-1239d0255272
+  udp: true
+  sni: fr1.test3.net
+  skip-cert-verify: true
+  network: ws
+  ws-opts:
+    path: /howdy
+    headers:
+      Host: fr1.test3.net
+- name: 👁️‍🗨️
+  type: vless
+  server: 162.159.4.2
+  port: 8443
+  uuid: eeb6823c-b926-4ea2-866a-5542edd26e59
+  udp: true
+  network: ws
+  tls: true
+  servername: t1s1.rittbo.kdns.fr
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: t1s1.rittbo.kdns.fr
+- name: https://t.me/xyfqzy ⚡
+  type: vless
+  server: 109.176.239.186
+  port: 8880
+  uuid: 583ceab3-4022-4553-9158-9bedc625ad4e
+  udp: true
+  network: ws
+  ws-opts:
+    path: /Telegram🇨🇳 @WangCai2 /?ed=2560
+    headers:
+      Host: ip.langmanshanxi.top
+- name: 🇨🇷⁜CR⁜LuxyNetBot⁜123
+  type: vless
+  server: 190.93.245.101
+  port: 80
+  uuid: 1ad22152-5e1d-4f26-b059-d19420dd74db
+  udp: true
+  network: ws
+  tls: true
+  servername: new-V2ray.斯涅過濾器69.website
+  ws-opts:
+    path: /
+    headers:
+      Host: new-V2ray.斯涅過濾器69.website
+- name: EPODONIOS-6
+  type: trojan
+  server: 104.16.174.121
+  port: 443
+  password: humanity
+  udp: true
+  sni: www.ignitelimit.com
+  network: ws
+  ws-opts:
+    path: /assignment
+    headers:
+      Host: www.ignitelimit.com
+- name: 美国 CloudFlare节点-4
+  type: vmess
+  server: 104.21.229.47
+  port: 80
+  uuid: 7022982f-da4c-48c9-c660-b2315abdcf7e
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  ws-opts:
+    path: /?ed=2048&Telegram🇨🇳
+    headers:
+      Host: a.prapt1.ir
+- name: EPODONIOS-7
+  type: vless
+  server: 198.41.223.229
+  port: 443
+  uuid: 1244a6b2-70e2-41fd-8997-97eebe3d2c61
+  udp: true
+  network: ws
+  tls: true
+  servername: accv9.mmhz9.workers.dev
+  client-fingerprint: chrome
+  ws-opts:
+    path: /
+    headers:
+      Host: accv9.mmhz9.workers.dev
+- name: 🇸🇪_SE_瑞典
+  type: trojan
+  server: 193.180.211.52
+  port: 443
+  password: 72a9357f-8841-4229-ad79-c3fdee0aae51
+  udp: true
+  sni: joss.dus.biz.id
+  network: ws
+  ws-opts:
+    path: /Free-VPN-CF-Geo-Project/193.180.211.52=443
+    headers: {}
+- name: 🇺🇸 _美国
+  type: vmess
+  server: 104.17.121.140
+  port: 8443
+  uuid: 3da5d27f-08d0-4078-f890-cf950ecb1708
+  alterId: 0
+  cipher: auto
+  udp: true
+  network: ws
+  tls: true
+  ws-opts:
+    path: /
+    headers:
+      Host: mg-innocent-adjust-shape.trycloudflare.com
+- name: US_speednode_0408
+  type: vless
+  server: 155.46.213.254
+  port: 8880
+  uuid: 34c01e61-f4f3-4afb-a83b-406caf8caa33
+  udp: true
+  network: ws
+  ws-opts:
+    path: /Telegram🇨🇳
+    headers:
+      Host: yg.bantony199.top
+- name: 🏳️ ShatakVPN 888782
+  type: vless
+  server: 104.19.214.98
+  port: 2087
+  uuid: 77777777-8a3e-6666-b6d1-a9c5f0e8b3a2
+  udp: true
+  network: ws
+  tls: true
+  servername: fgnix832fx.fx6hsv0.ccwu.cc
+  ws-opts:
+    path: /
+    headers:
+      Host: fgnix832fx.fx6hsv0.ccwu.cc
+- name: 🇫🇷法国5 | ⬇️ 4.7MB/s
+  type: vless
+  server: 104.21.56.233
+  port: 8880
+  uuid: 788b62ee-c339-440e-be0b-24e8b166206b
+  udp: true
+  network: ws
+  ws-opts:
+    path: /Telegram-Academi_vpn--Academi_vpn--Academi_vpn--Academi_vpn--Academi_vpn--Academi_vpn--Academi_vpn--Academi_vpn--Academi_vpn--Academi_vpn--Academi_vpn--Academi_vpn--Academi_vpn--Academi_vpn--Academi_vpn---Academi_vpn--Academi_vpn--Academi_vpn--Academi_vpn--Academi_vpn-Admin-Mystic_vpn?ed=2048
+    headers:
+      Host: amir-vpn-admin1.academivpn-mystic.site.
 - name: GB_speednode_0005
   type: trojan
   server: 164.38.155.135
@@ -1223,256 +1163,257 @@ proxies:
     path: /MiTiVPN=De
     headers:
       Host: 95r.ir
-- name: King_v2raay
-  type: vless
-  server: 104.26.7.89
-  port: 8443
-  uuid: f5cf098f-5143-440f-a490-7fc24ff27fb0
-  udp: true
-  network: ws
-  tls: true
-  servername: brmahasang.ahaysiahzangi.dpdns.org
-  client-fingerprint: chrome
-  ws-opts:
-    path: /KING_V2RAAY_FARS---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_---KING_V2RAAY_?ed=2560
-    headers:
-      Host: brmahasang.ahaysiahzangi.dpdns.org
-- name: 🇳🇱 NL 荷兰 49
-  type: vless
-  server: 188.114.96.2
-  port: 2052
-  uuid: d073f6ef-ffa6-474f-8cfa-5c83255551a2
-  udp: true
-  network: ws
-  tls: true
-  servername: us26.vlessx.us
-  ws-opts:
-    path: /?ed=2048
-    headers:
-      Host: us26.vlessx.us
-- name: 🇯🇵日本6丨电报群@bp520
+- name: EPODONIOS-8
   type: vmess
-  server: 162.159.142.236
-  port: 443
-  uuid: 88bd03e6-5ada-42da-9e77-448cd8c60e13
+  server: 69.84.182.49
+  port: 80
+  uuid: f8975871-a7a0-4906-8835-a23c1258ca1e
   alterId: 0
   cipher: auto
   udp: true
+  network: ws
+  ws-opts:
+    path: /
+    headers:
+      Host: google.whatsapp.snapp.torob.basalam.zula.uplaod-music.ir.
+- name: 🇨🇦 GRPC-TLS 📁 @DeamNet_proxy
+  type: vless
+  server: 172.67.249.36
+  port: 443
+  uuid: e4824193-4f54-453b-d037-88368e85ef0e
+  udp: true
   network: grpc
   tls: true
-  servername: jp3-lr87dmj9dg7gejde.mybestjj.com
+  servername: pqh30v5.carwashipdir.shop
   grpc-opts:
-    grpc-service-name: '1654431'
+    grpc-service-name: ''
+- name: 13|DE_speednode_0007
+  type: vless
+  server: 37.114.50.157
+  port: 4002
+  uuid: 00000000-0000-4000-8000-000000000000
+  udp: true
+  network: ws
+  ws-opts:
+    path: /security=tls
+    headers:
+      Host: sub.mot.ip-ddns.com
+- name: 首尔大带宽80端口
+  type: vmess
+  server: 146.56.167.171
+  port: 80
+  uuid: df802c71-9ae8-41cd-f77f-6285db8aac24
+  alterId: 0
+  cipher: auto
+  udp: true
 proxy-groups:
 - name: 🚀 节点选择
   type: select
   proxies:
   - ♻️ 自动选择
   - DIRECT
-  - 🇳🇦 Namibia - NA 🌍 VL-WS-TLS 4⃣
-  - 🇺🇸 US 美国 18
-  - 🇺🇸_US_美国_163
-  - 🇺🇸_US_美国->🇩🇪_DE_德国
-  - 🇺🇸_US_美国_221
-  - '@vpnclashfa - 56'
-  - 🏁RELAY-141.101.120.64-0796
-  - 美国+CloudFlare节点
-  - 🇺🇸_US_美国->🇫🇮_FI_芬兰
-  - 🔷🆔@v2ray_configs_pool🔷
-  - 🏁RELAY-104.21.13.125-3251
-  - 🇺🇸_US_美国_153
-  - 🇨🇷_CR_哥斯达黎加_5
-  - Telegram:@config_proxy 🔥
-  - 🇺🇸_US_美国_201
-  - '@Vip_Security join us - 403'
-  - 🏁RELAY-172.67.72.172-13426 github.com/zengfr/free-vpn-subscribe
-  - 🇨🇦_CA_加拿大
-  - 🇺🇸_US_美国_34
-  - 香港-HK-2
-  - 美国+CloudFlare
-  - github.com/freefq - 美国CloudFlare节点 13
-  - 🇺🇸 美国 CloudFlare节点
-  - 🇺🇸_US_美国->🇩🇪_DE_德国-2
-  - 🏁RELAY-45.85.119.29-1576
-  - Join+@Vmessq+|+Sv+Germany+🇩🇪
-  - 🇺🇸US_199 @jiediannh1
-  - 🏁RELAY-172.67.196.16-1883
-  - 🇺🇸+US+美国+81
-  - 🇺🇸_US_美国
-  - 美国 CloudFlare节点
-  - 🇺🇸US_5|2.1MB/s|GPT⁺|NF|D+|0%
-  - 🏁RELAY-104.21.11.169-1744
-  - 🇨🇦_CA_加拿大-2
-  - '[OpenRay] 🇨🇦 CA-11724'
-  - '@Capital_NET'
-  - 🇺🇸 _US_美国 3
-  - NL_speednode_0016
-  - 🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 10
-  - 🇺🇸 US 美国 39
-  - 🇬🇧英国4丨白嫖机场.com
-  - tg+univstar/43
-  - 🇺🇸 ShatakVPN 807920
+  - '@vpnclashfa - 84'
+  - 🇺🇸/US/美国/242
+  - '>>@FreakConfig::US'
   - EPODONIOS
-  - US🇺🇸
-  - 🇺🇸_US_美国->🇫🇷_FR_法国
-  - 🇺🇸_US_美国_275
-  - 🏁RELAY-185.162.228.1-0157
-  - 美国 CloudFlare节点-2
-  - 🇺🇸 🇺🇸_US_美国_1
-  - 104.18.3.2 ntls
   - 美国(欢迎订阅Youtube破解资源君)
+  - '💻 Channel 🆔 : @AlienVPN402 👽'
+  - 更多节点搜TG@anzhuoapk_9
+  - 🇺🇸 ShatakVPN 475626
+  - 🏁RELAY-185.162.228.1-0157
+  - 🇺🇸_US_美国_3
+  - 🇺🇸_US_美国
+  - 🇺🇸+US+美国+14
+  - 🇺🇸US_美國
+  - '💻 Channel 🆔 : @AlienVPN402 👽-2'
+  - 🔒 VL-WS-NONE 🏴‍☠️ NA-172.67.218.90:80
+  - 美国(TG频道:@kxswa)
+  - 美国_tg+univstar_89
+  - 🌐سرور 850 | Esf-07| MTSRVRS
+  - GB_speednode_0108
+  - 🇯🇵 Japan, Shibuya City [BL]
+  - '@hkaa0||美国'
+  - 'Telegram: @vpnbaz'
+  - 🇺🇸⋺US⋺⟪@LonUp_M⟫⋺181
+  - github.com/freefq - 美国CloudFlare节点 18
+  - 美国+V2CROSS.COM
+  - '@v2rayNG_VPNN'
+  - github.com/freefq - 美国CloudFlare节点 9
+  - Join+@Vmessq+|+Sv+Germany+🇩🇪
+  - 🏁RELAY-172.67.189.60-4266
+  - '@V2rayNG3'
+  - 🇺🇸 ShatakVPN 807920
+  - 🇺🇸US(AzadNet.t.me)_455
+  - 美国+CloudFlare节点
+  - ❓Other_6 | ⬇️ 1.8MB/s
+  - t.me/Config_Station
   - EPODONIOS-2
-  - 🇺🇸_US_美国->🇩🇪_DE_德国-3
-  - 🇸🇪_SE_瑞典
-  - 🇦🇪 AE 85.237.211.219 ◈ ws:80 ◈ Zenlayer Inc ◈ 78682
-  - 香港4|@ripaojiedian
-  - trojan
-  - vuclip
-  - Test VLESS
-  - 🇺🇸 United States - NA 🌎 VL-WS-TLS 4⃣
-  - 🇺🇸 US 美国 83
-  - 🇺🇸_US_美国_178
-  - 🇺🇸_US_美国->🇩🇪_DE_德国-4
-  - 🇺🇸_US_美国_125
-  - '@vpnclashfa - 34'
-  - 🏁RELAY-172.67.183.220-0072
-  - 美国 CloudFlare节点-3
-  - 🏁RELAY-104.21.4.6-0191
-  - XX 🏳️ ┇ VMESS-WS-NTLS - CLOUDFLARENET ┇ 104.24.169.183
-  - 🇺🇸_US_美国->🇳🇱_NL_荷兰
-  - 🇺🇸_US_美国_52
-  - 🇺🇸_US_美国_108
-  - Telegram:@config_proxy 🔥-2
-  - 🇺🇸_US_美国_167
-  - '@Vip_Security join us - 395'
-  - 🇺🇸_US_美国->🇧🇷_BR_巴西 github.com/zengfr/free-vpn-subscribe
-  - 🇧🇬+BG+保加利亚+42
-  - 🇺🇸_US_美国_111
-  - cf.090227.xyz
-  - 美国+CloudFlare节点-2
-  - 🇺🇸 美国 CloudFlare节点-2
-  - 🇵🇱_PL_波兰
-  - 🏁RELAY-104.16.207.87-1845
-  - '@V2ray_NG🇫🇮'
-  - 🇺🇸US_181 @jiediannh1
-  - 🇺🇸_US_美国->🇩🇪_DE_德国-5
-  - 美国 CloudFlare节点-4
-  - 04-USA
-  - 🇺🇸_US_美国_64
-  - 🇸🇬SG_1|4.9MB/s|GPT⁺|YT-SG|NF|D+|GM|0%
-  - 🇺🇸_US_美国->🇳🇱_NL_荷兰-2
+  - 美国 CloudFlare节点
+  - EPODONIOS-3
   - 🇺🇸_US_美国-2
-  - '[OpenRay] 🇨🇦 CA-11717'
-  - 🇬🇧[openproxylist.com] vmess-GB
-  - 🇺🇸 _CR_哥斯达黎加->🇺🇸_US_美国
+  - 🏁RELAY-203.30.191.19-1770
+  - US_speednode_0407
+  - 🏳️ ShatakVPN 197181
+  - 🇮🇳印度3 | ⬇️ 4.2MB/s
+  - NL_speednode_0016
+  - EPODONIOS-4
+  - '@meli_proxyy'
+  - 13|FR_speednode_0008
+  - '0008 | 183. 🇫🇮 VLESS | TG: @wlrustg'
+  - 东京2-80
+  - trojan
+  - test-vless-none
+  - '@vpnclashfa - 73'
+  - 🏁RELAY-172.67.68.246-0140
+  - 🌐|UN|@mobilesignal
+  - EPODONIOS-5
+  - 欧洲(欢迎订阅Youtube破解资源君)
+  - '💻 Channel 🆔 : @AlienVPN402 👽-3'
+  - 永久节点订阅TG@anzhuoapk_2320
+  - 🇺🇸 ShatakVPN 239155
+  - 🏁RELAY-104.19.170.36-1776
+  - 美国 CloudFlare节点-2
+  - 🇺🇸_US_美国->🇩🇪_DE_德国
+  - 美国 CloudFlare节点-3
+  - DE VLESS-115
+  - '💻 Channel 🆔 : @AlienVPN402 👽-4'
+  - 🇳🇱 Netherlands - 37
+  - 美国/tg+univstar/137
+  - 美国_tg+univstar_101
+  - 🌐سرور 808 | Esf-07| MTSRVRS
+  - GB_speednode_0090
+  - 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) [BL]
+  - '@hkaa0||美国-2'
+  - 'Telegram: @vpnbaz-2'
+  - 🇺🇸⋺US⋺⟪@LonUp_M⟫⋺67
+  - github.com/freefq - 美国CloudFlare节点 4
+  - 美国+CloudFlare节点-2
+  - '@v2rayNG_VPNN-2'
+  - 🇺🇸tg频道:@sharingnode
+  - '@V2rayN_Free'
+  - 🏁RELAY-104.27.97.42-6820
+  - '@V2rayNG3-2'
+  - 🇸🇬 ShatakVPN 749147
+  - 🇺🇸US(AzadNet.t.me)_456
+  - 👁️‍🗨️
+  - https://t.me/xyfqzy ⚡
+  - 🇨🇷⁜CR⁜LuxyNetBot⁜123
+  - EPODONIOS-6
+  - 美国 CloudFlare节点-4
+  - EPODONIOS-7
+  - 🇸🇪_SE_瑞典
+  - 🇺🇸 _美国
+  - US_speednode_0408
+  - 🏳️ ShatakVPN 888782
+  - 🇫🇷法国5 | ⬇️ 4.7MB/s
   - GB_speednode_0005
-  - King_v2raay
-  - 🇳🇱 NL 荷兰 49
-  - 🇯🇵日本6丨电报群@bp520
+  - EPODONIOS-8
+  - 🇨🇦 GRPC-TLS 📁 @DeamNet_proxy
+  - 13|DE_speednode_0007
+  - 首尔大带宽80端口
 - name: ♻️ 自动选择
   type: url-test
   url: https://www.gstatic.com/generate_204
   interval: 300
   proxies:
-  - 🇳🇦 Namibia - NA 🌍 VL-WS-TLS 4⃣
-  - 🇺🇸 US 美国 18
-  - 🇺🇸_US_美国_163
-  - 🇺🇸_US_美国->🇩🇪_DE_德国
-  - 🇺🇸_US_美国_221
-  - '@vpnclashfa - 56'
-  - 🏁RELAY-141.101.120.64-0796
-  - 美国+CloudFlare节点
-  - 🇺🇸_US_美国->🇫🇮_FI_芬兰
-  - 🔷🆔@v2ray_configs_pool🔷
-  - 🏁RELAY-104.21.13.125-3251
-  - 🇺🇸_US_美国_153
-  - 🇨🇷_CR_哥斯达黎加_5
-  - Telegram:@config_proxy 🔥
-  - 🇺🇸_US_美国_201
-  - '@Vip_Security join us - 403'
-  - 🏁RELAY-172.67.72.172-13426 github.com/zengfr/free-vpn-subscribe
-  - 🇨🇦_CA_加拿大
-  - 🇺🇸_US_美国_34
-  - 香港-HK-2
-  - 美国+CloudFlare
-  - github.com/freefq - 美国CloudFlare节点 13
-  - 🇺🇸 美国 CloudFlare节点
-  - 🇺🇸_US_美国->🇩🇪_DE_德国-2
-  - 🏁RELAY-45.85.119.29-1576
-  - Join+@Vmessq+|+Sv+Germany+🇩🇪
-  - 🇺🇸US_199 @jiediannh1
-  - 🏁RELAY-172.67.196.16-1883
-  - 🇺🇸+US+美国+81
-  - 🇺🇸_US_美国
-  - 美国 CloudFlare节点
-  - 🇺🇸US_5|2.1MB/s|GPT⁺|NF|D+|0%
-  - 🏁RELAY-104.21.11.169-1744
-  - 🇨🇦_CA_加拿大-2
-  - '[OpenRay] 🇨🇦 CA-11724'
-  - '@Capital_NET'
-  - 🇺🇸 _US_美国 3
-  - NL_speednode_0016
-  - 🇺🇸 US | 🟢 | trojan | @kurdistan_vpn_perfectt | 10
-  - 🇺🇸 US 美国 39
-  - 🇬🇧英国4丨白嫖机场.com
-  - tg+univstar/43
-  - 🇺🇸 ShatakVPN 807920
+  - '@vpnclashfa - 84'
+  - 🇺🇸/US/美国/242
+  - '>>@FreakConfig::US'
   - EPODONIOS
-  - US🇺🇸
-  - 🇺🇸_US_美国->🇫🇷_FR_法国
-  - 🇺🇸_US_美国_275
-  - 🏁RELAY-185.162.228.1-0157
-  - 美国 CloudFlare节点-2
-  - 🇺🇸 🇺🇸_US_美国_1
-  - 104.18.3.2 ntls
   - 美国(欢迎订阅Youtube破解资源君)
+  - '💻 Channel 🆔 : @AlienVPN402 👽'
+  - 更多节点搜TG@anzhuoapk_9
+  - 🇺🇸 ShatakVPN 475626
+  - 🏁RELAY-185.162.228.1-0157
+  - 🇺🇸_US_美国_3
+  - 🇺🇸_US_美国
+  - 🇺🇸+US+美国+14
+  - 🇺🇸US_美國
+  - '💻 Channel 🆔 : @AlienVPN402 👽-2'
+  - 🔒 VL-WS-NONE 🏴‍☠️ NA-172.67.218.90:80
+  - 美国(TG频道:@kxswa)
+  - 美国_tg+univstar_89
+  - 🌐سرور 850 | Esf-07| MTSRVRS
+  - GB_speednode_0108
+  - 🇯🇵 Japan, Shibuya City [BL]
+  - '@hkaa0||美国'
+  - 'Telegram: @vpnbaz'
+  - 🇺🇸⋺US⋺⟪@LonUp_M⟫⋺181
+  - github.com/freefq - 美国CloudFlare节点 18
+  - 美国+V2CROSS.COM
+  - '@v2rayNG_VPNN'
+  - github.com/freefq - 美国CloudFlare节点 9
+  - Join+@Vmessq+|+Sv+Germany+🇩🇪
+  - 🏁RELAY-172.67.189.60-4266
+  - '@V2rayNG3'
+  - 🇺🇸 ShatakVPN 807920
+  - 🇺🇸US(AzadNet.t.me)_455
+  - 美国+CloudFlare节点
+  - ❓Other_6 | ⬇️ 1.8MB/s
+  - t.me/Config_Station
   - EPODONIOS-2
-  - 🇺🇸_US_美国->🇩🇪_DE_德国-3
-  - 🇸🇪_SE_瑞典
-  - 🇦🇪 AE 85.237.211.219 ◈ ws:80 ◈ Zenlayer Inc ◈ 78682
-  - 香港4|@ripaojiedian
-  - trojan
-  - vuclip
-  - Test VLESS
-  - 🇺🇸 United States - NA 🌎 VL-WS-TLS 4⃣
-  - 🇺🇸 US 美国 83
-  - 🇺🇸_US_美国_178
-  - 🇺🇸_US_美国->🇩🇪_DE_德国-4
-  - 🇺🇸_US_美国_125
-  - '@vpnclashfa - 34'
-  - 🏁RELAY-172.67.183.220-0072
-  - 美国 CloudFlare节点-3
-  - 🏁RELAY-104.21.4.6-0191
-  - XX 🏳️ ┇ VMESS-WS-NTLS - CLOUDFLARENET ┇ 104.24.169.183
-  - 🇺🇸_US_美国->🇳🇱_NL_荷兰
-  - 🇺🇸_US_美国_52
-  - 🇺🇸_US_美国_108
-  - Telegram:@config_proxy 🔥-2
-  - 🇺🇸_US_美国_167
-  - '@Vip_Security join us - 395'
-  - 🇺🇸_US_美国->🇧🇷_BR_巴西 github.com/zengfr/free-vpn-subscribe
-  - 🇧🇬+BG+保加利亚+42
-  - 🇺🇸_US_美国_111
-  - cf.090227.xyz
-  - 美国+CloudFlare节点-2
-  - 🇺🇸 美国 CloudFlare节点-2
-  - 🇵🇱_PL_波兰
-  - 🏁RELAY-104.16.207.87-1845
-  - '@V2ray_NG🇫🇮'
-  - 🇺🇸US_181 @jiediannh1
-  - 🇺🇸_US_美国->🇩🇪_DE_德国-5
-  - 美国 CloudFlare节点-4
-  - 04-USA
-  - 🇺🇸_US_美国_64
-  - 🇸🇬SG_1|4.9MB/s|GPT⁺|YT-SG|NF|D+|GM|0%
-  - 🇺🇸_US_美国->🇳🇱_NL_荷兰-2
+  - 美国 CloudFlare节点
+  - EPODONIOS-3
   - 🇺🇸_US_美国-2
-  - '[OpenRay] 🇨🇦 CA-11717'
-  - 🇬🇧[openproxylist.com] vmess-GB
-  - 🇺🇸 _CR_哥斯达黎加->🇺🇸_US_美国
+  - 🏁RELAY-203.30.191.19-1770
+  - US_speednode_0407
+  - 🏳️ ShatakVPN 197181
+  - 🇮🇳印度3 | ⬇️ 4.2MB/s
+  - NL_speednode_0016
+  - EPODONIOS-4
+  - '@meli_proxyy'
+  - 13|FR_speednode_0008
+  - '0008 | 183. 🇫🇮 VLESS | TG: @wlrustg'
+  - 东京2-80
+  - trojan
+  - test-vless-none
+  - '@vpnclashfa - 73'
+  - 🏁RELAY-172.67.68.246-0140
+  - 🌐|UN|@mobilesignal
+  - EPODONIOS-5
+  - 欧洲(欢迎订阅Youtube破解资源君)
+  - '💻 Channel 🆔 : @AlienVPN402 👽-3'
+  - 永久节点订阅TG@anzhuoapk_2320
+  - 🇺🇸 ShatakVPN 239155
+  - 🏁RELAY-104.19.170.36-1776
+  - 美国 CloudFlare节点-2
+  - 🇺🇸_US_美国->🇩🇪_DE_德国
+  - 美国 CloudFlare节点-3
+  - DE VLESS-115
+  - '💻 Channel 🆔 : @AlienVPN402 👽-4'
+  - 🇳🇱 Netherlands - 37
+  - 美国/tg+univstar/137
+  - 美国_tg+univstar_101
+  - 🌐سرور 808 | Esf-07| MTSRVRS
+  - GB_speednode_0090
+  - 🇳🇱 The Netherlands, Amsterdam (Amsterdam-Noord) [BL]
+  - '@hkaa0||美国-2'
+  - 'Telegram: @vpnbaz-2'
+  - 🇺🇸⋺US⋺⟪@LonUp_M⟫⋺67
+  - github.com/freefq - 美国CloudFlare节点 4
+  - 美国+CloudFlare节点-2
+  - '@v2rayNG_VPNN-2'
+  - 🇺🇸tg频道:@sharingnode
+  - '@V2rayN_Free'
+  - 🏁RELAY-104.27.97.42-6820
+  - '@V2rayNG3-2'
+  - 🇸🇬 ShatakVPN 749147
+  - 🇺🇸US(AzadNet.t.me)_456
+  - 👁️‍🗨️
+  - https://t.me/xyfqzy ⚡
+  - 🇨🇷⁜CR⁜LuxyNetBot⁜123
+  - EPODONIOS-6
+  - 美国 CloudFlare节点-4
+  - EPODONIOS-7
+  - 🇸🇪_SE_瑞典
+  - 🇺🇸 _美国
+  - US_speednode_0408
+  - 🏳️ ShatakVPN 888782
+  - 🇫🇷法国5 | ⬇️ 4.7MB/s
   - GB_speednode_0005
-  - King_v2raay
-  - 🇳🇱 NL 荷兰 49
-  - 🇯🇵日本6丨电报群@bp520
+  - EPODONIOS-8
+  - 🇨🇦 GRPC-TLS 📁 @DeamNet_proxy
+  - 13|DE_speednode_0007
+  - 首尔大带宽80端口
 rules:
 - MATCH,🚀 节点选择
