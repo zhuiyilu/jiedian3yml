@@ -1,29 +1,29 @@
 name: 自动发现 + 聚合 + 测速 + 筛选最佳100
-
+ 
 on:
   workflow_dispatch:
   schedule:
     - cron: '17 */8 * * *'
-
+ 
 permissions:
   contents: write
-
+ 
 jobs:
   collect:
     runs-on: ubuntu-latest
     timeout-minutes: 35
-
+ 
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
           fetch-depth: 0
-
+ 
       - name: 安装依赖
         run: |
           pip install --quiet --break-system-packages pyyaml || pip install --quiet pyyaml
-
+ 
       - name: 下载 mihomo
         run: |
           VER=$(curl -sf "https://api.github.com/repos/MetaCubeX/mihomo/releases/latest" \
@@ -35,7 +35,7 @@ jobs:
           gunzip mihomo.gz
           chmod +x mihomo
           ./mihomo -v
-
+ 
       - name: 自动发现 + 聚合 + 测速
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -48,7 +48,7 @@ jobs:
           from collections import defaultdict
           from urllib.parse import urlparse, unquote, parse_qs
           from concurrent.futures import ThreadPoolExecutor, as_completed
-
+ 
           # ================================================================
           # 参数
           # ================================================================
@@ -58,7 +58,7 @@ jobs:
           SEARCH_MAX_FILES       = 120  # 最多下载多少个文件
           FILES_PER_REPO         = 5    # 每个仓库最多取多少文件
           SEARCH_API_DELAY       = 1.2  # API 请求间隔(秒)
-
+ 
           TCP_CONCURRENCY        = 500
           TCP_TIMEOUT            = 1.5
           HTTP_CANDIDATES        = 500
@@ -68,14 +68,14 @@ jobs:
           TOP_N                  = 100
           MIHOMO_API             = "http://127.0.0.1:9090"
           MIHOMO_SECRET          = "AutoCollect2025"
-
+ 
           PREFIXES = ('vmess://', 'vless://', 'trojan://', 'ss://',
                       'hysteria2://', 'hy2://', 'tuic://')
-
+ 
           # ================================================================
           # 搜索策略（大范围撒网）
           # ================================================================
-
+ 
           # 仓库关键词搜索
           REPO_SEARCH_QUERIES = [
               '免费节点 clash vmess vless 订阅',
@@ -93,7 +93,7 @@ jobs:
               'proxy scraper free nodes daily update',
               'clash provider free nodes auto collect',
           ]
-
+ 
           # 话题搜索（GitHub Topics）
           REPO_TOPICS = [
               # 协议类
@@ -116,7 +116,7 @@ jobs:
               # 聚合类
               'aggregator', 'collector', 'crawler',
           ]
-
+ 
           # 在仓库里查找节点文件时的候选路径
           KNOWN_FILE_NAMES = [
               'sub.yaml', 'sub.yml', 'sub.txt',
@@ -126,29 +126,29 @@ jobs:
               'nodes.txt', 'proxy.txt', 'all.txt', 'subscribe.txt',
               'base64.txt', 'v2ray.txt', 'vmess.txt',
           ]
-
+ 
           KNOWN_FOLDERS = [
               '', 'clash', 'sub', 'config', 'nodes',
               'proxy', 'output', 'result', 'subscribe',
               'v2ray', 'xray', 'data', 'free',
           ]
-
+ 
           # ================================================================
           # 基础工具
           # ================================================================
-
+ 
           def utc_now():
               return datetime.datetime.now(datetime.timezone.utc)
-
+ 
           def days_ago(n):
               return (utc_now() - datetime.timedelta(days=n)).strftime('%Y-%m-%d')
-
+ 
           def parse_iso(s):
               try:
                   return datetime.datetime.fromisoformat(s.replace('Z', '+00:00'))
               except Exception:
                   return None
-
+ 
           def is_fresh(date_str, max_days):
               """日期字符串是否在 max_days 天以内"""
               if not date_str:
@@ -157,7 +157,7 @@ jobs:
               if not dt:
                   return True
               return (utc_now() - dt).days <= max_days
-
+ 
           def gh_request(url, token, timeout=15):
               headers = {
                   'User-Agent': 'Mozilla/5.0',
@@ -168,7 +168,7 @@ jobs:
               req = urllib.request.Request(url, headers=headers)
               with urllib.request.urlopen(req, timeout=timeout) as r:
                   return json.loads(r.read())
-
+ 
           def fetch_raw(url, timeout=30):
               try:
                   req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
@@ -176,11 +176,11 @@ jobs:
                       return r.read()
               except Exception:
                   return None
-
+ 
           def b64d(s):
               s = s.strip().replace('-', '+').replace('_', '/')
               return base64.b64decode(s + '=' * (-len(s) % 4))
-
+ 
           def decode_content(data):
               if not data:
                   return ''
@@ -191,16 +191,16 @@ jobs:
                   except Exception:
                       pass
               return text
-
+ 
           # ================================================================
           # Clash YAML ↔ 节点链接
           # ================================================================
-
+ 
           def clash_to_link(px):
               try:
                   t = px.get('type', '').lower()
                   name_q = urllib.parse.quote(str(px.get('name', '')))
-
+ 
                   if t == 'vmess':
                       info = {
                           'v': '2', 'ps': px.get('name', ''),
@@ -217,7 +217,7 @@ jobs:
                       elif px.get('network') == 'grpc':
                           info['path'] = (px.get('grpc-opts') or {}).get('grpc-service-name', '')
                       return 'vmess://' + base64.b64encode(json.dumps(info).encode()).decode()
-
+ 
                   if t == 'vless':
                       params = {'encryption': 'none', 'type': px.get('network', 'tcp')}
                       sec = 'none'
@@ -239,7 +239,7 @@ jobs:
                           params['serviceName'] = (px.get('grpc-opts') or {}).get('grpc-service-name', '')
                       q = urllib.parse.urlencode(params)
                       return f"vless://{px.get('uuid','')}@{px['server']}:{px['port']}?{q}#{name_q}"
-
+ 
                   if t == 'trojan':
                       params = {}
                       if px.get('sni'): params['sni'] = px['sni']
@@ -253,12 +253,12 @@ jobs:
                               params['host'] = (opts.get('headers') or {}).get('Host', '')
                       q = urllib.parse.urlencode(params)
                       return f"trojan://{px.get('password','')}@{px['server']}:{px['port']}?{q}#{name_q}"
-
+ 
                   if t == 'ss':
                       method, pwd = px.get('cipher', ''), px.get('password', '')
                       userinfo = base64.b64encode(f'{method}:{pwd}'.encode()).decode()
                       return f"ss://{userinfo}@{px['server']}:{px['port']}#{name_q}"
-
+ 
                   if t == 'hysteria2':
                       params = {}
                       if px.get('sni'): params['sni'] = px['sni']
@@ -267,7 +267,7 @@ jobs:
                       if px.get('obfs-password'): params['obfs-password'] = px['obfs-password']
                       q = urllib.parse.urlencode(params)
                       return f"hysteria2://{px.get('password','')}@{px['server']}:{px['port']}?{q}#{name_q}"
-
+ 
                   if t == 'tuic':
                       params = {}
                       if px.get('sni'): params['sni'] = px['sni']
@@ -280,7 +280,7 @@ jobs:
               except Exception:
                   pass
               return None
-
+ 
           def _parse_clash_yaml(text):
               try:
                   data = yaml.safe_load(text)
@@ -290,7 +290,7 @@ jobs:
                   return [l for l in (clash_to_link(px) for px in proxies) if l]
               except Exception:
                   return []
-
+ 
           def extract_nodes(content):
               if not content: return []
               stripped = content.lstrip()
@@ -311,11 +311,11 @@ jobs:
               except Exception:
                   pass
               return []
-
+ 
           # ================================================================
           # GitHub 自动发现（带活跃过滤）
           # ================================================================
-
+ 
           def search_repos(token, query, topic=False, per_page=10):
               """搜索仓库，只返回 REPO_MAX_AGE_DAYS 天内有推送的"""
               pushed_filter = f'+pushed:>{days_ago(REPO_MAX_AGE_DAYS)}'
@@ -331,7 +331,7 @@ jobs:
               except Exception as e:
                   print(f"    搜索失败: {e}")
                   return []
-
+ 
           def get_file_commit_date(token, full_name, path):
               """获取文件最后一次 commit 的时间"""
               url = (f'https://api.github.com/repos/{full_name}/commits'
@@ -343,14 +343,14 @@ jobs:
               except Exception:
                   pass
               return None
-
+ 
           def list_contents(token, full_name, path=''):
               url = f'https://api.github.com/repos/{full_name}/contents/{path}'
               try:
                   return gh_request(url, token, timeout=10)
               except Exception:
                   return []
-
+ 
           def is_node_filename(name):
               n = name.lower()
               if not n.endswith(('.yaml', '.yml', '.txt')):
@@ -364,20 +364,20 @@ jobs:
                           'v2ray', 'vmess', 'vless', 'trojan', 'base64',
                           'subscribe', 'xray', 'hysteria', 'tuic')
               return any(k in n for k in keywords)
-
+ 
           def find_node_files_in_repo(token, repo):
               """扫描仓库，找近期更新的节点文件"""
               full_name = repo['full_name']
               result = []   # [(download_url, label, file_date)]
-
+ 
               root_items = list_contents(token, full_name, '')
               time.sleep(0.3)
               if not isinstance(root_items, list):
                   return result
-
+ 
               root_files = {it['name'].lower(): it for it in root_items if it['type'] == 'file'}
               root_dirs  = {it['name'].lower(): it for it in root_items if it['type'] == 'dir'}
-
+ 
               def add_file(item, folder=''):
                   # 用 commit API 验证文件最后更新时间
                   file_date = get_file_commit_date(token, full_name, item['path'])
@@ -386,7 +386,7 @@ jobs:
                       return   # 文件太久没更新，跳过
                   label = f"github:{full_name}/{item['name']}"
                   result.append((item['download_url'], label))
-
+ 
               # 扫描根目录文件（日期命名优先）
               candidates = sorted(
                   [it for n, it in root_files.items() if is_node_filename(n)],
@@ -395,7 +395,7 @@ jobs:
               for it in candidates[:FILES_PER_REPO]:
                   if len(result) >= FILES_PER_REPO: break
                   add_file(it)
-
+ 
               # 扫描常见子目录
               for dname in KNOWN_FOLDERS[1:]:
                   if len(result) >= FILES_PER_REPO: break
@@ -411,18 +411,18 @@ jobs:
                   for it in yaml_files[:3]:
                       if len(result) >= FILES_PER_REPO: break
                       add_file(it)
-
+ 
               return result
-
+ 
           def discover_all_sources(token, my_repo):
               if not token:
                   print("⚠️  未检测到 GITHUB_TOKEN，跳过 GitHub 自动发现")
                   return {}
-
+ 
               print(f"🔍 开始 GitHub 自动发现（只收录 {REPO_MAX_AGE_DAYS} 天内活跃仓库）\n")
-
+ 
               repo_map = {}
-
+ 
               def add_repos(items, source=''):
                   added = 0
                   for r in items:
@@ -437,7 +437,7 @@ jobs:
                       }
                       added += 1
                   return added
-
+ 
               # 关键词搜索
               print(f"  [1/2] 关键词搜索（{len(REPO_SEARCH_QUERIES)} 个查询）...")
               for q in REPO_SEARCH_QUERIES:
@@ -446,7 +446,7 @@ jobs:
                   n = add_repos(items)
                   print(f"    +{n:2d}  \"{q[:40]}\"")
                   time.sleep(SEARCH_API_DELAY)
-
+ 
               # 话题搜索
               print(f"\n  [2/2] 话题搜索（{len(REPO_TOPICS)} 个话题）...")
               for topic in REPO_TOPICS:
@@ -455,13 +455,13 @@ jobs:
                   n = add_repos(items)
                   print(f"    +{n:2d}  topic:{topic}")
                   time.sleep(SEARCH_API_DELAY)
-
+ 
               # 按 star + 推送时间排序
               repos = sorted(repo_map.values(),
                              key=lambda x: (x['stars'], x['pushed_at']),
                              reverse=True)
               print(f"\n  共发现 {len(repos)} 个近期活跃仓库，扫描节点文件...\n")
-
+ 
               all_sources = {}
               for repo in repos:
                   if len(all_sources) >= SEARCH_MAX_FILES: break
@@ -475,14 +475,14 @@ jobs:
                   else:
                       print(f"  - {fn} → 无近期节点文件")
                   time.sleep(SEARCH_API_DELAY)
-
+ 
               print(f"\n✅ 发现 {len(all_sources)} 个有效节点文件\n")
               return all_sources
-
+ 
           # ================================================================
           # host:port 解析
           # ================================================================
-
+ 
           def get_host_port(link):
               try:
                   if link.startswith('vmess://'):
@@ -499,11 +499,11 @@ jobs:
               except Exception:
                   pass
               return None, None
-
+ 
           # ================================================================
           # Stage 1: asyncio TCP ping
           # ================================================================
-
+ 
           async def tcp_ping(host, port, sem):
               async with sem:
                   try:
@@ -517,7 +517,7 @@ jobs:
                       return delay
                   except Exception:
                       return None
-
+ 
           async def run_tcp_stage(server_list):
               sem = asyncio.Semaphore(TCP_CONCURRENCY)
               tasks = [tcp_ping(h, p, sem) for h, p in server_list]
@@ -531,11 +531,11 @@ jobs:
                   alive = sum(1 for x in results if x is not None)
                   print(f"  进度 {done}/{len(tasks)}，存活 {alive}")
               return results
-
+ 
           # ================================================================
           # Stage 2: mihomo HTTP 测速
           # ================================================================
-
+ 
           def mihomo_delay(name):
               encoded = urllib.parse.quote(name, safe='')
               url = (f"{MIHOMO_API}/proxies/{encoded}/delay"
@@ -548,7 +548,7 @@ jobs:
                       return json.loads(r.read()).get('delay')
               except Exception:
                   return None
-
+ 
           def run_http_stage(proxy_names):
               results = {}
               done, total = 0, len(proxy_names)
@@ -562,11 +562,11 @@ jobs:
                           ok = sum(1 for v in results.values() if v)
                           print(f"  进度 {done}/{total}，可用 {ok}")
               return results
-
+ 
           # ================================================================
           # 节点链接 → Clash 代理字典
           # ================================================================
-
+ 
           def safe_name(raw, used):
               name = (raw or '').strip() or '节点'
               base, i = name, 2
@@ -574,12 +574,12 @@ jobs:
                   name = f'{base}-{i}'; i += 1
               used.add(name)
               return name
-
+ 
           def pqs(link):
               p = urlparse(link)
               q = {k: v[0] for k, v in parse_qs(p.query).items()}
               return p, q, unquote(p.fragment)
-
+ 
           def vmess_proxy(link, used):
               try:
                   info = json.loads(b64d(link[8:]).decode('utf-8', errors='ignore'))
@@ -600,7 +600,7 @@ jobs:
                       px['grpc-opts'] = {'grpc-service-name': info.get('path') or ''}
                   return px
               except Exception: return None
-
+ 
           def vless_proxy(link, used):
               try:
                   p, q, frag = pqs(link)
@@ -625,7 +625,7 @@ jobs:
                       px['grpc-opts'] = {'grpc-service-name': q.get('serviceName', '')}
                   return px
               except Exception: return None
-
+ 
           def trojan_proxy(link, used):
               try:
                   p, q, frag = pqs(link)
@@ -647,7 +647,7 @@ jobs:
                       px['grpc-opts'] = {'grpc-service-name': q.get('serviceName', '')}
                   return px
               except Exception: return None
-
+ 
           # clash/mihomo 支持的合法 SS 加密方式白名单
           VALID_SS_CIPHERS = {
               'aes-128-gcm', 'aes-192-gcm', 'aes-256-gcm',
@@ -659,7 +659,7 @@ jobs:
               '2022-blake3-aes-128-gcm', '2022-blake3-aes-256-gcm',
               '2022-blake3-chacha20-poly1305',
           }
-
+ 
           # 一些节点提供方会用旧版/非标准别名命名 cipher，
           # clash 内核并不认识这些别名，需要先转换成标准名称再校验
           CIPHER_ALIASES = {
@@ -671,7 +671,7 @@ jobs:
               'aead_aes_128_gcm': 'aes-128-gcm',
               'aead_aes_256_gcm': 'aes-256-gcm',
           }
-
+ 
           def ss_proxy(link, used):
               try:
                   p, q, frag = pqs(link)
@@ -699,7 +699,7 @@ jobs:
                   return {'name': name, 'type': 'ss', 'server': host, 'port': int(port),
                           'cipher': method, 'password': password, 'udp': True}
               except Exception: return None
-
+ 
           def hy2_proxy(link, used):
               try:
                   p, q, frag = pqs(link)
@@ -720,7 +720,7 @@ jobs:
                       px['obfs-password'] = obfs_pwd
                   return px
               except Exception: return None
-
+ 
           def tuic_proxy(link, used):
               try:
                   p, q, frag = pqs(link)
@@ -737,7 +737,7 @@ jobs:
                   if q.get('allow_insecure') == '1': px['skip-cert-verify'] = True
                   return px
               except Exception: return None
-
+ 
           def to_clash(link, used):
               if link.startswith('vmess://'): return vmess_proxy(link, used)
               if link.startswith('vless://'): return vless_proxy(link, used)
@@ -746,39 +746,107 @@ jobs:
               if link.startswith('hysteria2://') or link.startswith('hy2://'): return hy2_proxy(link, used)
               if link.startswith('tuic://'): return tuic_proxy(link, used)
               return None
-
+ 
           # ================================================================
-          # 主逻辑
+          # 配置自愈校验：用 mihomo 内核本身测试最终配置，
+          # 自动定位并剔除任何导致校验失败的节点，直到配置完全合法
           # ================================================================
-
+ 
+          import re as _re
+ 
+          def validate_and_clean_proxies(proxies, max_rounds=None):
+              """
+              用真实的 mihomo -t 测试配置。
+              如果报错指出了具体的第 N 个 proxy 有问题，就把它剔除后重新测试，
+              循环直到配置通过校验，或者没有更多可剔除的节点为止。
+              这样无论以后遇到什么协议/字段的新怪问题，都能在生成阶段自动兜底，
+              而不需要针对每一种坏值手动加白名单。
+              """
+              proxies = list(proxies)
+              if max_rounds is None:
+                  max_rounds = len(proxies) + 5
+ 
+              test_dir = 'mihomo_selftest'
+              os.makedirs(test_dir, exist_ok=True)
+ 
+              for round_i in range(max_rounds):
+                  if not proxies:
+                      break
+                  cfg = {
+                      'mixed-port': 7891,
+                      'log-level': 'silent',
+                      'mode': 'rule',
+                      'ipv6': False,
+                      'proxies': proxies,
+                      'proxy-groups': [],
+                      'rules': ['MATCH,DIRECT'],
+                  }
+                  with open(os.path.join(test_dir, 'config.yaml'), 'w', encoding='utf-8') as f:
+                      yaml.dump(cfg, f, allow_unicode=True, sort_keys=False)
+ 
+                  try:
+                      result = subprocess.run(
+                          ['./mihomo', '-t', '-d', test_dir],
+                          capture_output=True, text=True, timeout=30
+                      )
+                  except Exception as e:
+                      print(f"  ⚠️ 自检执行失败，跳过自愈校验: {e}")
+                      break
+ 
+                  output = (result.stdout or '') + '\n' + (result.stderr or '')
+ 
+                  if result.returncode == 0:
+                      print(f"  ✅ 配置自检通过（共尝试 {round_i+1} 轮，剩余 {len(proxies)} 个节点）")
+                      return proxies
+ 
+                  # 尝试从报错里提取出问题节点的序号，例如 "proxy 8: ..."
+                  m = _re.search(r'proxy\s+(\d+)\s*:', output)
+                  if not m:
+                      print(f"  ⚠️ 配置校验失败，但无法定位具体节点，停止自愈：\n{output[:500]}")
+                      break
+ 
+                  bad_idx = int(m.group(1)) - 1   # 报错里通常是 1-based
+                  if 0 <= bad_idx < len(proxies):
+                      bad_name = proxies[bad_idx].get('name', '未知')
+                      print(f"  🗑️  剔除第 {bad_idx+1} 个非法节点: {bad_name}")
+                      proxies.pop(bad_idx)
+                  else:
+                      print(f"  ⚠️ 报错索引 {bad_idx+1} 超出范围，停止自愈")
+                      break
+              else:
+                  print(f"  ⚠️ 自愈校验达到最大轮数仍未通过，使用当前剩余 {len(proxies)} 个节点")
+ 
+              return proxies
+ 
+ 
           def main():
               token   = os.getenv('GITHUB_TOKEN', '')
               my_repo = os.getenv('GITHUB_REPOSITORY', '')
               extra   = os.getenv('EXTRA_SUBS', '')
-
+ 
               # 1. GitHub 自动发现
               github_sources = discover_all_sources(token, my_repo)
-
+ 
               # 2. 手动补充订阅（可选，配置在 EXTRA_SUBS secret 里）
               extra_sources = {}
               for u in extra.splitlines():
                   u = u.strip()
                   if u: extra_sources[u] = '手动订阅'
-
+ 
               all_sources = {**github_sources, **extra_sources}
               print(f"📦 总来源: {len(github_sources)} GitHub自动 + "
                     f"{len(extra_sources)} 手动 = {len(all_sources)} 个\n")
-
+ 
               if not all_sources:
                   print("❌ 没有找到任何来源，退出")
                   return
-
+ 
               # 3. 并发下载
               print("⬇️  并发下载节点文件...")
               url_list = list(all_sources.keys())
               with ThreadPoolExecutor(max_workers=min(30, len(url_list))) as pool:
                   raws = list(pool.map(fetch_raw, url_list))
-
+ 
               # 4. 解析节点
               seen_links = {}
               src_counts = defaultdict(int)
@@ -790,16 +858,16 @@ jobs:
                   for n in nodes:
                       if n not in seen_links:
                           seen_links[n] = label
-
+ 
               unique_nodes = list(seen_links.keys())
               print(f"\n✅ 去重后共 {len(unique_nodes)} 个节点，来自 {len(src_counts)} 个来源")
               print("Top 来源：")
               for label, cnt in sorted(src_counts.items(), key=lambda x: -x[1])[:15]:
                   print(f"  {cnt:6d} 个 ← {label}")
-
+ 
               if not unique_nodes:
                   print("❌ 没有获取到节点，退出"); return
-
+ 
               # 5. 按 host:port 分组
               server_to_links = {}
               for link in unique_nodes:
@@ -807,10 +875,10 @@ jobs:
                   if not h or not p: continue
                   key = (h.lower(), p)
                   server_to_links.setdefault(key, []).append(link)
-
+ 
               all_servers = list(server_to_links.keys())
               print(f"\n唯一服务器: {len(all_servers)} 个")
-
+ 
               # 6. Stage 1: TCP ping
               print(f"\n🔌 Stage 1 TCP ping（{len(all_servers)} 个服务器）...")
               t0 = time.time()
@@ -820,14 +888,14 @@ jobs:
                        for i in range(len(all_servers)) if delays[i] is not None]
               alive.sort(key=lambda x: x[1])
               print(f"✅ TCP 存活: {len(alive)}/{len(all_servers)}")
-
+ 
               # 7. 公平采样
               sub_buckets = defaultdict(list)
               for server_key, _ in alive:
                   for link in server_to_links[server_key]:
                       sub_buckets[seen_links.get(link, 'unknown')].append(link)
                       break
-
+ 
               tcp_candidates = []
               seen_c = set()
               sub_iters = {s: iter(l) for s, l in sub_buckets.items()}
@@ -848,10 +916,10 @@ jobs:
                           exhausted.append(src)
                   for src in exhausted: sub_iters.pop(src, None)
                   if not sub_iters: break
-
+ 
               print(f"\n公平采样: {len(tcp_candidates)} 个 HTTP 候选"
                     f"（来自 {len(sub_counts2)} 个来源，每源最多 {HTTP_PER_SOURCE} 个）")
-
+ 
               # 8. Stage 2: mihomo HTTP 测速
               print(f"\n🌐 Stage 2 真实 HTTP 测速（{len(tcp_candidates)} 个节点）...")
               used_names = set()
@@ -862,7 +930,7 @@ jobs:
                   if px:
                       name_to_link[px['name']] = link
                       clash_proxies.append(px)
-
+ 
               os.makedirs('mihomo_home', exist_ok=True)
               with open('mihomo_home/config.yaml', 'w', encoding='utf-8') as f:
                   yaml.dump({
@@ -871,7 +939,7 @@ jobs:
                       'mode': 'direct', 'ipv6': False, 'geo-auto-update': False,
                       'proxies': clash_proxies, 'proxy-groups': [], 'rules': [],
                   }, f, allow_unicode=True, sort_keys=False)
-
+ 
               proc = subprocess.Popen(['./mihomo', '-d', 'mihomo_home'],
                                        stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
               ready = False
@@ -881,7 +949,7 @@ jobs:
                       s.close(); ready = True; break
                   except Exception:
                       time.sleep(0.3)
-
+ 
               best_links = []
               if not ready:
                   print("⚠️  mihomo 启动超时，降级使用 TCP 结果")
@@ -902,17 +970,33 @@ jobs:
                           if len(best_links) >= TOP_N: break
                           if link not in tested:
                               best_links.append(link); tested.add(link)
-
-              # 9. 输出订阅文件
-              combined = '\n'.join(best_links)
+ 
+              # 9. 转换为 Clash 格式，并做自愈校验（剔除任何导致校验失败的节点）
+              used2 = set()
+              proxies_out = []
+              name_to_link_final = {}
+              for l in best_links:
+                  px = to_clash(l, used2)
+                  if px:
+                      proxies_out.append(px)
+                      name_to_link_final[px['name']] = l
+ 
+              print(f"\n🔍 对最终 {len(proxies_out)} 个节点做配置自愈校验...")
+              proxies_out = validate_and_clean_proxies(proxies_out)
+ 
+              # 根据自愈校验后剩余的节点，重新对齐原始链接顺序，
+              # 保证 sub.txt / sub_plain.txt / sub.yaml 三个文件内容完全一致
+              kept_names = [p['name'] for p in proxies_out]
+              final_links = [name_to_link_final[n] for n in kept_names
+                             if n in name_to_link_final]
+ 
+              combined = '\n'.join(final_links)
               with open('sub.txt', 'w') as f:
                   f.write(base64.b64encode(combined.encode()).decode())
               with open('sub_plain.txt', 'w') as f:
                   f.write(combined)
-
-              used2 = set()
-              proxies_out = [px for px in (to_clash(l, used2) for l in best_links) if px]
-              names_out   = [p['name'] for p in proxies_out]
+ 
+              names_out = kept_names
               with open('sub.yaml', 'w', encoding='utf-8') as f:
                   yaml.dump({
                       'mixed-port': 7890, 'allow-lan': False,
@@ -927,22 +1011,22 @@ jobs:
                       ],
                       'rules': ['MATCH,🚀 节点选择'],
                   }, f, allow_unicode=True, sort_keys=False)
-
-              print(f"\n✅ 最终输出 {len(best_links)} 个节点"
-                    f"（{len(proxies_out)} 个转换为 Clash 格式）")
+ 
+              print(f"\n✅ 最终输出 {len(final_links)} 个节点"
+                    f"（{len(proxies_out)} 个转换为 Clash 格式，已通过内核自检）")
               print("订阅文件：sub.txt / sub_plain.txt / sub.yaml")
-
+ 
           if __name__ == '__main__':
               main()
           EOF
-
+ 
           python3 collect.py
-
+ 
       - name: 提交更新
         run: |
           git config --global user.name "github-actions[bot]"
           git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
+ 
           if [ -f sub.txt ] && [ -f sub.yaml ]; then
             git add sub.txt sub_plain.txt sub.yaml
             if git diff --cached --quiet; then
